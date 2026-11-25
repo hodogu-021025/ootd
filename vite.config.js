@@ -13,7 +13,5 @@ export default defineConfig({
     // 빌드 결과 확인용 포트
     port: 4173,
     strictPort: true,
-    // 외부 임시 주소로 공유할 때 접속이 막히지 않게 허용한다
-    allowedHosts: ['.trycloudflare.com'],
   },
 })
