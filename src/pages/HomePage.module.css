@@ -175,7 +175,9 @@
     transition: opacity 0.2s;
 }
 
-.card:hover .outfitOverlay {
+/* 키보드로 옷 이름 링크에 오면 그때도 보인다 */
+.card:hover .outfitOverlay,
+.card:focus-within .outfitOverlay {
     opacity: 1;
 }
 
@@ -211,10 +213,17 @@
     gap: 6px;
 }
 
+/* 숨어 있는 동안에는 누를 수 없다: 터치 기기에서 사진을 누르면 보이지 않는 링크로 넘어가던 것을 막는다
+   (첫 탭은 덮개를 띄우고, 보이는 링크를 다시 누르면 이동한다) */
 .outfitLink {
-    pointer-events: auto;
+    pointer-events: none;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.card:hover .outfitLink,
+.card:focus-within .outfitLink {
+    pointer-events: auto;
 }
 
 .outfitLink:hover {

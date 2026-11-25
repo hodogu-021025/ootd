@@ -218,26 +218,35 @@ function ProductListPage() {
     }
 
     // 초기화: 브랜드·계절·카테고리·검색어·정렬을 모두 처음 상태로 되돌린다 (성별 페이지는 유지, 페이지는 1로)
-    // 좁은 화면에서는 조건을 고르면 메뉴를 접어 바로 결과가 보이게 한다
+    // CLOTHES 화면은 성별이 없으므로 빈 조건으로 되돌린다 (gender=null 이 주소에 남지 않게)
     function handleReset() {
-        setSearchParams({ gender });
+        setSearchParams(gender ? { gender } : {});
         setFilterOpen(false);
+    }
+
+    // 좁은 화면: 더 고를 것이 없는 칸(세부 항목, 세부 항목이 없는 중분류, 전체)을 고르면 메뉴를 접어 결과를 보여 준다.
+    // 대분류나 세부 항목이 있는 중분류는 그 아래를 펼치는 동작이기도 해서 메뉴를 열어 둔다
+    function isLastPick(next) {
+        if (!next.category || next.item) return true;
+        if (!next.group) return false;
+        const group = categories?.find(category => category.name === next.category)
+            ?.groups.find(candidate => candidate.name === next.group);
+        return !group || group.items.length === 0;
     }
 
     // 카테고리·브랜드·계절은 각각 바꿔도 나머지 조건을 유지한다
     function handleCategorySelect(nextCategory) {
         applyConditions({ nextCategory });
-        setFilterOpen(false);
+        if (isLastPick(nextCategory)) setFilterOpen(false);
     }
 
+    // 브랜드·계절은 카테고리와 함께 고르는 경우가 많아 메뉴를 열어 둔다 ('필터 닫기'로 접는다)
     function handleBrandSelect(nextBrand) {
         applyConditions({ nextBrand });
-        setFilterOpen(false);
     }
 
     function handleSeasonSelect(nextSeason) {
         applyConditions({ nextSeason });
-        setFilterOpen(false);
     }
 
     // 위치 표시: HOME › MEN › 상의 › 티셔츠 › 반소매

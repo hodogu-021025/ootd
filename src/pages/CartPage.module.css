@@ -320,9 +320,13 @@ a.itemName:hover {
         align-items: center;
     }
 
-    .itemImage {
+    /* 사진은 상세로 가는 링크(li 의 첫 칸) 안에 있으므로 칸 자리는 링크에 준다 */
+    .item > a:first-child {
         grid-area: image;
         align-self: start;
+    }
+
+    .itemImage {
         width: 64px;
         height: 64px;
     }

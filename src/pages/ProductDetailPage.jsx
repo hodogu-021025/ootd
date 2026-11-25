@@ -40,6 +40,7 @@ function ProductDetailPage() {
         setQuantityText(String(MIN_QUANTITY));
         setMessage('');
         setAdded(false);
+        setAlertMessage('');
     }
 
     // 없는 의류 ID로 들어온 경우 (F-04 예외 처리)

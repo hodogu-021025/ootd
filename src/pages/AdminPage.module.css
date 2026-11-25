@@ -315,10 +315,6 @@
     vertical-align: top;
 }
 
-/* 좁은 화면에서 표가 넓으면 이 칸 안에서 가로로 민다(넓은 화면에서는 아무 일도 하지 않는다) */
-.tableWrap {
-    overflow-x: auto;
-}
 
 /* 태블릿 이하: 왼쪽 메뉴를 표 위의 가로 줄로 올리고, 표는 칸이 꺾이지 않는 폭을 유지한다 */
 @media (max-width: 900px) {
@@ -336,6 +332,13 @@
 
     .tabs {
         flex-wrap: wrap;
+    }
+
+    /* 표가 넓으면 이 칸 안에서 가로로 민다. 가로를 자르면 세로도 잘리므로(overflow) 칸 제목의 펼침 메뉴가
+       잘리지 않게 칸 높이를 메뉴 높이만큼 잡아 둔다. 넓은 화면에서는 칸을 자르지 않는다 */
+    .tableWrap {
+        overflow-x: auto;
+        min-height: 280px;
     }
 
     .table {

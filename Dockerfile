@@ -8,7 +8,8 @@ RUN --mount=type=cache,target=/root/.npm npm ci
 COPY . .
 RUN npm run build
 
-FROM nginx:1.27-alpine
+# stable 줄은 보안 수정이 계속 나오는 nginx 안정판이다(고정한 1.27 줄은 더 이상 새로 만들지 않는다)
+FROM nginx:stable-alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80

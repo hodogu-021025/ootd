@@ -10,6 +10,11 @@ permissions:
   contents: read
   packages: write
 
+# 같은 브랜치에 연달아 올리면 앞의 실행을 멈춘다: 늦게 끝난 옛 실행이 :latest 를 덮어쓰지 않게
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Lint, build and push image

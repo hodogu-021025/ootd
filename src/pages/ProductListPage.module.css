@@ -183,6 +183,11 @@
         position: static;
     }
 
+    /* 열린 검색 줄(SearchBox)이 이 줄을 덮는 위치 기준 */
+    .tabs {
+        position: relative;
+    }
+
     .sidebarOpen {
         display: block;
     }
@@ -199,9 +204,7 @@
         margin-bottom: 16px;
     }
 
-    /* 열린 검색 줄(SearchBox)이 이 줄을 덮는 위치 기준 */
     .tabs {
-        position: relative;
         gap: 14px;
         margin-bottom: 20px;
     }
@@ -220,5 +223,22 @@
     .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px 12px;
+    }
+}
+
+/* 아주 좁은 휴대폰(380px 이하, 예: 320px): 성별 탭 셋과 검색·정렬이 한 줄에 들어가도록 간격과 글자를 더 줄인다 */
+@media (max-width: 380px) {
+    .tabs {
+        gap: 8px;
+    }
+
+    .tab {
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+
+    .tabArrow {
+        padding-right: 4px;
+        margin-right: -4px;
     }
 }

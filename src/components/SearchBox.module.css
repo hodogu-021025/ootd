@@ -164,9 +164,9 @@
     color: var(--color-muted);
 }
 
-/* 휴대폰: 옆으로 펼칠 자리가 없어서, 열면 탭 줄을 덮는 검색 줄이 된다(탭 줄이 위치 기준, ProductListPage 의 .tabs).
+/* 태블릿 이하: 옆으로 220px 펼칠 자리가 없어서, 열면 탭 줄을 덮는 검색 줄이 된다(탭 줄이 위치 기준, ProductListPage 의 .tabs).
    오른쪽 끝의 정렬 단추(36px + 간격 4px)는 덮지 않아 검색 결과도 바로 정렬할 수 있다 */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .searchOpen {
         position: absolute;
         top: 0;

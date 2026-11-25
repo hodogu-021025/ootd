@@ -33,7 +33,7 @@ React 수업 내용을 바탕으로 의류 탐색부터 모의 주문까지 동�
 | 도구 | 용도 |
 |---|---|
 | CSS Modules | 컴포넌트별 스타일 (`*.module.css`, Vite 기본 지원) |
-| localStorage | 장바구니·주문 내역 저장 (브라우저 기본 기능) |
+| localStorage | 의류·재고, 장바구니, 주문 내역, 좋아요, 재입고 알림, 최근 검색어 저장 (브라우저 기본 기능) |
 | Docker · nginx · GitHub Actions | 배포: CI 가 이미지를 만들어 GHCR 에 올리고, 서버가 받아 https://ootd.hdg3383.com 으로 내보낸다 |
 
 > Vite 8.2.2, rolldown 1.2.7, oxlint 1.81.0은 버전을 고정했습니다.
