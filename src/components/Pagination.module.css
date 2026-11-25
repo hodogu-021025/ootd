@@ -36,3 +36,11 @@
     color: var(--color-border);
     cursor: default;
 }
+
+/* 휴대폰: 페이지가 많으면(관리자 상품 목록 등) 번호 줄을 다음 줄로 넘긴다 */
+@media (max-width: 600px) {
+    .pagination {
+        flex-wrap: wrap;
+        margin-top: 32px;
+    }
+}

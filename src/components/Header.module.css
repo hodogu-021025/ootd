@@ -132,3 +132,31 @@
     background: var(--color-primary);
     color: var(--color-bg);
 }
+
+/* 휴대폰: 로고 줄 아래에 메뉴 줄을 늘 따로 두고(폭과 상관없이 두 줄이라 높이가 일정하다) 메뉴를 고르게 벌린다.
+   메뉴 글자 위아래를 넓혀 손가락으로 누르기 쉽게 한다. 이 높이는 global.css 의 --header-height(휴대폰)와 맞춘다 */
+@media (max-width: 600px) {
+    .inner {
+        padding: 10px 16px 0;
+        row-gap: 0;
+    }
+
+    /* 메뉴를 감싼 nav 가 .inner 의 한 칸이라, 그 칸을 한 줄 전체로 늘려 늘 아래 줄로 내린다 */
+    .inner > nav {
+        flex-basis: 100%;
+    }
+
+    .menu {
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .menuLink {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .adminButton {
+        padding: 6px 10px;
+    }
+}

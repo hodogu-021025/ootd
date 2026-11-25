@@ -148,3 +148,77 @@
     background: var(--color-primary);
     color: var(--color-bg);
 }
+
+/* 넓은 화면에서는 메뉴가 늘 보이므로 펼침 단추를 숨긴다 */
+.filterToggle {
+    display: none;
+}
+
+/* 태블릿 이하: 카테고리 메뉴는 목록 위로 올리고 '필터' 단추로 펼친다. 상품은 한 줄에 3개 */
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .filterToggle {
+        display: block;
+        justify-self: start;
+        padding: 8px 20px;
+        border: 1px solid var(--color-primary);
+        background: var(--color-bg);
+        color: var(--color-primary);
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .filterToggle[aria-expanded='true'] {
+        background: var(--color-primary);
+        color: var(--color-bg);
+    }
+
+    .sidebar {
+        display: none;
+        position: static;
+    }
+
+    .sidebarOpen {
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 12px;
+    }
+}
+
+/* 휴대폰: 성별 탭 간격을 줄이고, 상품은 한 줄에 2개 */
+@media (max-width: 600px) {
+    .title {
+        margin-bottom: 16px;
+    }
+
+    /* 열린 검색 줄(SearchBox)이 이 줄을 덮는 위치 기준 */
+    .tabs {
+        position: relative;
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .tab {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    /* 성별 페이지로 가는 작은 화살표: 그림은 그대로 두고 누르는 자리만 넓힌다 */
+    .tabArrow {
+        padding: 8px 8px 8px 4px;
+        margin-right: -8px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 12px;
+    }
+}

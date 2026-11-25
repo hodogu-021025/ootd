@@ -208,6 +208,8 @@ function AdminPage() {
                         </div>
 
                     {/* 결과가 없어도 칸 제목(검색·정렬·상태)은 계속 쓸 수 있도록 표를 늘 그린다 */}
+                    {/* 좁은 화면에서는 표를 가로로 밀어 본다(칸이 많아 줄이면 글자가 한 자씩 꺾인다) */}
+                    <div className={styles.tableWrap}>
                     <table className={styles.table}>
                     <thead>
                         <tr>
@@ -322,6 +324,7 @@ function AdminPage() {
                             )}
                         </tbody>
                     </table>
+                    </div>
 
                     {sorted.length > PAGE_SIZE && (
                         <Pagination

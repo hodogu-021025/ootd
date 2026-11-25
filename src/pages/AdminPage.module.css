@@ -314,3 +314,31 @@
 .table th {
     vertical-align: top;
 }
+
+/* 좁은 화면에서 표가 넓으면 이 칸 안에서 가로로 민다(넓은 화면에서는 아무 일도 하지 않는다) */
+.tableWrap {
+    overflow-x: auto;
+}
+
+/* 태블릿 이하: 왼쪽 메뉴를 표 위의 가로 줄로 올리고, 표는 칸이 꺾이지 않는 폭을 유지한다 */
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .menu {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .table {
+        min-width: 760px;
+    }
+}

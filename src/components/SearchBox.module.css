@@ -163,3 +163,28 @@
     font-size: 13px;
     color: var(--color-muted);
 }
+
+/* 휴대폰: 옆으로 펼칠 자리가 없어서, 열면 탭 줄을 덮는 검색 줄이 된다(탭 줄이 위치 기준, ProductListPage 의 .tabs).
+   오른쪽 끝의 정렬 단추(36px + 간격 4px)는 덮지 않아 검색 결과도 바로 정렬할 수 있다 */
+@media (max-width: 600px) {
+    .searchOpen {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        bottom: 1px;
+        left: 0;
+        z-index: 6;
+        background: var(--color-bg);
+    }
+
+    /* 폭은 auto 가 아니라 100% 로 둔다: 폭이 바뀌는 움직임이 끝나야(transitionend) 최근 검색어 목록이 열린다 */
+    .searchOpen .searchInput {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .recent {
+        width: 100%;
+    }
+}

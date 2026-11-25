@@ -41,3 +41,22 @@ img {
     margin: 0 auto;
     padding: 24px 16px;
 }
+
+/* 휴대폰: 헤더가 로고 줄과 메뉴 줄 두 줄이 되므로(Header.module.css), 그 높이에 맞춰 기준 높이도 늘린다 */
+@media (max-width: 600px) {
+    :root {
+        --header-height: 88px;
+    }
+
+    .container {
+        padding: 20px 16px;
+    }
+
+    /* 아이폰은 16px 보다 작은 입력 칸을 누르면 화면을 확대한다. 각 화면의 입력 칸 글자 크기(14px)를 휴대폰에서만 16px 로 올린다
+       (화면별 모듈 클래스가 이 선택자보다 앞서므로 !important 로 덮는다) */
+    input:not([type='checkbox']):not([type='radio']),
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+}

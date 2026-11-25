@@ -81,6 +81,12 @@ function ProductListPage() {
     // 화면 안에서만 쓰는 일시적인 상태라 저장하지 않는다
     const [selectedGenders, setSelectedGenders] = useState([]);
 
+    // 좁은 화면(휴대폰·태블릿)에서 카테고리 메뉴를 펼친 성별 페이지. 넓은 화면에서는 메뉴가 늘 보이므로 쓰지 않는다
+    // 성별 값으로 기억해 두어, 다른 성별 페이지로 옮기면 메뉴는 접힌 채로 시작한다
+    const [filterOpenFor, setFilterOpenFor] = useState(null);
+    const filterOpen = filterOpenFor === gender;
+    const setFilterOpen = open => setFilterOpenFor(open ? gender : null);
+
     // 성별이 없거나 잘못된 값이면 전체 의류 목록으로 본다
     const pageTitle = genderLabel || 'CLOTHES';
 
@@ -212,21 +218,26 @@ function ProductListPage() {
     }
 
     // 초기화: 브랜드·계절·카테고리·검색어·정렬을 모두 처음 상태로 되돌린다 (성별 페이지는 유지, 페이지는 1로)
+    // 좁은 화면에서는 조건을 고르면 메뉴를 접어 바로 결과가 보이게 한다
     function handleReset() {
         setSearchParams({ gender });
+        setFilterOpen(false);
     }
 
     // 카테고리·브랜드·계절은 각각 바꿔도 나머지 조건을 유지한다
     function handleCategorySelect(nextCategory) {
         applyConditions({ nextCategory });
+        setFilterOpen(false);
     }
 
     function handleBrandSelect(nextBrand) {
         applyConditions({ nextBrand });
+        setFilterOpen(false);
     }
 
     function handleSeasonSelect(nextSeason) {
         applyConditions({ nextSeason });
+        setFilterOpen(false);
     }
 
     // 위치 표시: HOME › MEN › 상의 › 티셔츠 › 반소매
@@ -393,7 +404,20 @@ function ProductListPage() {
             {categories
                 ? (
                     <div className={styles.layout}>
-                        <aside className={styles.sidebar}>
+                        {/* 좁은 화면에서만 보이는 단추: 카테고리 메뉴를 펼치고 접는다 */}
+                        <button
+                            type="button"
+                            className={styles.filterToggle}
+                            aria-expanded={filterOpen}
+                            aria-controls="category-menu"
+                            onClick={() => setFilterOpen(!filterOpen)}
+                        >
+                            {filterOpen ? '필터 닫기' : '필터'}
+                        </button>
+                        <aside
+                            id="category-menu"
+                            className={filterOpen ? `${styles.sidebar} ${styles.sidebarOpen}` : styles.sidebar}
+                        >
                             <CategoryMenu
                                 categories={categories}
                                 selected={selected}

@@ -218,3 +218,15 @@
     background: var(--color-primary);
     color: var(--color-bg);
 }
+
+/* 태블릿 이하: 결제 금액을 주문 상품·배송 정보 아래로 내린다(따라오지 않는다) */
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .summary {
+        position: static;
+    }
+}

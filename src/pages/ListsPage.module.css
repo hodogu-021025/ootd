@@ -190,3 +190,10 @@
     color: var(--color-muted);
     text-align: center;
 }
+
+/* 휴대폰: 좋아요 목록과 재입고 알림 목록을 위아래로 */
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

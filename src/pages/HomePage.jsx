@@ -246,7 +246,7 @@ function HomePage() {
             <section className="container">
                 <h3 className={styles.sectionTitle}>Today&apos;s OOTD</h3>
 
-                <div className={styles.banners}>
+                <div className={`${styles.banners} ${styles.looks}`}>
                     {OOTD_LOOKS.map(look =>
                         <OotdCard
                             key={look.name}

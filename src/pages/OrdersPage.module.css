@@ -187,3 +187,24 @@
 .cancelButton:hover {
     border-color: var(--color-primary);
 }
+
+/* 휴대폰: 주문 아래 줄(받는 분 · 배송비 · 최종 금액)이 좁으면 받는 분을 한 줄 위로 올린다 */
+@media (max-width: 600px) {
+    .orderFoot {
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+
+    .shipping {
+        flex: 1 0 100%;
+    }
+
+    /* 배송비·최종 금액은 꺾이지 않게 두고, 받는 분 이름은 길면 줄을 바꾼다 */
+    .orderFoot > :not(.shipping) {
+        white-space: nowrap;
+    }
+
+    .shipping {
+        overflow-wrap: anywhere;
+    }
+}

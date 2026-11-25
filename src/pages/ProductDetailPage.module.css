@@ -295,3 +295,11 @@
     margin: 0 0 24px;
     font-size: 13px;
 }
+
+/* 휴대폰: 사진을 위에 꽉 차게, 정보는 그 아래로 */
+@media (max-width: 600px) {
+    .detail {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+}

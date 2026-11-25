@@ -84,3 +84,11 @@
     background: var(--color-primary);
     color: var(--color-bg);
 }
+
+/* 휴대폰: 두 단추 글자가 꺾이지 않게 한다 */
+@media (max-width: 600px) {
+    .primaryButton,
+    .outlineButton {
+        white-space: nowrap;
+    }
+}
