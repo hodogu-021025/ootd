@@ -1,0 +1,12 @@
+/* 내용이 짧아도 Footer가 화면 아래에 붙도록 설정 */
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 가로 폭 제한은 각 화면의 container가 담당한다 (히어로처럼 꽉 차는 영역을 위해) */
+.main {
+    flex: 1;
+    width: 100%;
+}

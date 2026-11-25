@@ -1,0 +1,36 @@
+.breadcrumb {
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.separator {
+    margin: 0 8px;
+    color: var(--color-muted);
+}
+
+.link {
+    color: var(--color-muted);
+}
+
+.link:hover {
+    color: var(--color-primary);
+}
+
+.current {
+    font-weight: 700;
+    color: var(--color-primary);
+}

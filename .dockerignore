@@ -1,0 +1,9 @@
+node_modules
+dist
+backup
+docs
+.git
+.github
+.claude
+.idea
+*.log

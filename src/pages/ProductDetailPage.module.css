@@ -1,0 +1,297 @@
+/* 왼쪽 사진, 오른쪽 정보 */
+.detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.imageBox {
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    background: var(--color-bg-sub);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-muted);
+}
+
+.name {
+    margin: 0 0 12px;
+    font-size: 26px;
+}
+
+/* 의류 정보: 항목 이름과 값을 두 칸으로 정렬 */
+/* 의류 정보 상자: 카테고리 해시태그 + 항목 목록 */
+.infoBox {
+    margin: 0 0 24px;
+    padding: 16px 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 14px;
+}
+
+.hashtag {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.hashtag:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.specs {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 10px 16px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.specs dt {
+    color: var(--color-muted);
+}
+
+.specs dd {
+    margin: 0;
+}
+
+.label {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sizes {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.sizeButton {
+    min-width: 52px;
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sizeButton:hover {
+    border-color: var(--color-primary);
+}
+
+/* 선택한 사이즈는 검정 배경에 흰 글씨 */
+.sizeSelected {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/* 장바구니 버튼과 좋아요 버튼을 한 줄에 둔다 */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.cartButton {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.message {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+/* 가격 바로 아래에 오는 상품 설명 */
+.description {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-muted);
+}
+
+.notFound {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.outlineButton {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 24px;
+    border: 1px solid var(--color-primary);
+}
+
+/* 담기 안내 옆의 장바구니 이동 링크 */
+.cartLink {
+    margin-left: 12px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* 구매 수량과 총 금액을 한 줄에 둔다 */
+.quantityRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* 수량 감소 · 입력창 · 증가를 하나의 테두리 안에 둔다 */
+.quantity {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+}
+
+.quantityButton {
+    width: 36px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--color-text);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quantityButton:hover:not(:disabled) {
+    color: var(--color-primary);
+}
+
+.quantityButton:disabled {
+    color: var(--color-border);
+    cursor: default;
+}
+
+.quantityInput {
+    width: 48px;
+    height: 40px;
+    border: none;
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    background: none;
+    color: var(--color-text);
+    font-size: 14px;
+    font-family: inherit;
+    text-align: center;
+}
+
+.quantityInput:focus {
+    outline: none;
+}
+
+.totalPrice {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.totalLabel {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-muted);
+}
+
+/* 모든 사이즈가 재고 없음일 때의 표시 (F-27) */
+.soldOut {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* 사이즈 버튼 안의 재고 상태 */
+.sizeButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.sizeStock {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--color-muted);
+}
+
+/* 재고 없음 사이즈는 고를 수 없다 */
+.sizeButton:disabled {
+    border-style: dashed;
+    color: var(--color-muted);
+    cursor: default;
+}
+
+.sizeButton:disabled:hover {
+    border-color: var(--color-border);
+}
+
+.cartButton:disabled {
+    background: var(--color-border);
+    color: var(--color-muted);
+    cursor: default;
+}
+
+/* 사이즈 칸: 사이즈 버튼과 그 아래 재입고 알림 버튼 (F-28) */
+.sizeCell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.alertButton {
+    padding: 6px 4px;
+    border: 1px solid var(--color-primary);
+    background: var(--color-bg);
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.alertButton:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/* 이미 신청한 사이즈 */
+.alertDone {
+    padding: 6px 4px;
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.alertMessage {
+    margin: 0 0 24px;
+    font-size: 13px;
+}

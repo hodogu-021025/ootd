@@ -1,0 +1,50 @@
+/* 좋아요 버튼을 사진 위에 겹치기 위한 기준 영역 */
+.wrap {
+    position: relative;
+}
+
+.card {
+    display: block;
+}
+
+/* 사진 오른쪽 위의 좋아요 버튼 */
+.like {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* 사진 비율을 3:4로 맞추고 넘치는 부분은 잘라낸다 */
+.imageBox {
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    background: var(--color-bg-sub);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.card:hover .image {
+    transform: scale(1.04);
+}
+
+.brand {
+    margin: 10px 0 2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-muted);
+}
+
+.name {
+    margin: 0 0 4px;
+    font-size: 14px;
+    /* 긴 상품명은 한 줄로 줄이고 말줄임표를 붙인다 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

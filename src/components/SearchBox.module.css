@@ -1,0 +1,165 @@
+/* 검색: 평소에는 돋보기만, 누르면 왼쪽으로 입력창이 펼쳐진다
+   최근 검색어 목록의 위치 기준이 된다 */
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    width: 0;
+    padding: 6px 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background: none;
+    color: var(--color-text);
+    font-size: 14px;
+    font-family: inherit;
+    opacity: 0;
+    transition: width 0.25s, opacity 0.25s, padding 0.25s;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchOpen .searchInput {
+    width: 220px;
+    padding: 6px 8px;
+    border-bottom-color: var(--color-primary);
+    opacity: 1;
+}
+
+.searchButton {
+    display: flex;
+    padding: 8px;
+    border: none;
+    background: none;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* 검은색 돋보기 */
+.searchIcon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+}
+
+/* 최근 검색어: 입력창 바로 아래에 같은 폭으로 펼쳐지는 흰 카드
+   상품 카드·사이드바 위에 보이되, 위에 붙는 헤더(z-index 10)보다는 아래에 둔다 */
+.recent {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 5;
+    width: 220px;
+    padding: 12px 0 6px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    animation: recentDown 0.2s ease-out;
+}
+
+/* 입력창 아래에서 살짝 내려오며 나타난다 */
+@keyframes recentDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 움직임을 줄이도록 설정한 사용자는 바로 보여 준다 */
+@media (prefers-reduced-motion: reduce) {
+    .recent {
+        animation: none;
+    }
+}
+
+.recentHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px 8px;
+}
+
+.recentTitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-muted);
+}
+
+.clearAll {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.clearAll:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.recentList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* 검색어 한 줄: 왼쪽 검색어(누르면 다시 검색) + 오른쪽 삭제 */
+.recentItem {
+    display: flex;
+    align-items: center;
+}
+
+.recentItem:hover {
+    background: var(--color-bg-sub);
+}
+
+.recentTerm {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 14px;
+    border: none;
+    background: none;
+    color: var(--color-text);
+    font-size: 14px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.removeButton {
+    flex-shrink: 0;
+    padding: 4px 14px 4px 8px;
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.removeButton:hover {
+    color: var(--color-primary);
+}
+
+.recentEmpty {
+    margin: 0;
+    padding: 8px 14px 10px;
+    font-size: 13px;
+    color: var(--color-muted);
+}

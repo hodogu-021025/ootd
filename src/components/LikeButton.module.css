@@ -1,0 +1,52 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* 상품 사진 오른쪽 위의 작은 흰 원형 버튼 */
+.card {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.card .heart {
+    width: 18px;
+    height: 18px;
+}
+
+/* 상세 화면: 장바구니 버튼 옆의 네모 테두리 버튼 */
+.detail {
+    flex-shrink: 0;
+    width: 56px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+}
+
+.detail:hover {
+    border-color: var(--color-primary);
+}
+
+.detail .heart {
+    width: 24px;
+    height: 24px;
+}
+
+.heart {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 1.8;
+    transition: transform 0.15s;
+}
+
+/* 좋아요를 누르면 빨간색으로 채운다 (흑백 디자인의 유일한 예외 색) */
+.heartLiked {
+    fill: var(--color-like);
+    stroke: var(--color-like);
+    transform: scale(1.08);
+}

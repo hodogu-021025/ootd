@@ -1,0 +1,86 @@
+/* 가운데 정렬한 완료 안내 상자 */
+.box {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 40px 32px;
+    border: 1px solid var(--color-border);
+    text-align: center;
+}
+
+/* 검정 원 안의 체크 표시 */
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    font-size: 26px;
+}
+
+.title {
+    margin: 0 0 24px;
+    font-size: 22px;
+}
+
+.message {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 10px 16px;
+    margin: 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    font-size: 14px;
+    text-align: left;
+}
+
+.info dt {
+    color: var(--color-muted);
+}
+
+.info dd {
+    margin: 0;
+    font-weight: 700;
+}
+
+.amount {
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.primaryButton,
+.outlineButton {
+    padding: 12px 24px;
+    border: 1px solid var(--color-primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.primaryButton {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.outlineButton {
+    color: var(--color-primary);
+}
+
+.outlineButton:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}

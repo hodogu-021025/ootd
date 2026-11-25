@@ -1,0 +1,32 @@
+/* 할인율 · 할인 가격 · 할인 전 가격을 한 줄에 둔다 */
+.price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px;
+    font-weight: 700;
+}
+
+/* 목록 카드 */
+.card {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 상세 화면 */
+.detail {
+    margin: 0 0 24px;
+    font-size: 22px;
+}
+
+/* 할인율: 흑백 디자인이라 색 대신 굵은 검정 글씨로 강조한다 */
+.rate {
+    color: var(--color-primary);
+}
+
+/* 할인 전 가격: 작은 회색 글씨에 취소선 */
+.original {
+    color: var(--color-muted);
+    font-size: 0.8em;
+    font-weight: 400;
+}

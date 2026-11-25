@@ -1,0 +1,33 @@
+/* 헤더 아래에 가로로 붙는 안내 줄 (흑백 디자인이라 검정 바탕으로 눈에 띄게 한다) */
+.notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.button {
+    flex-shrink: 0;
+    padding: 8px 18px;
+    border: 1px solid var(--color-bg);
+    background: none;
+    color: var(--color-bg);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--color-bg);
+    color: var(--color-primary);
+}

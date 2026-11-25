@@ -1,0 +1,316 @@
+.head {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.title {
+    margin: 0 0 6px;
+}
+
+.description {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-muted);
+}
+
+/* 왼쪽 메뉴 + 오른쪽 목록 */
+.layout {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: sticky;
+    top: calc(var(--header-height) + 16px);
+}
+
+.menuButton {
+    display: block;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    font-size: 14px;
+}
+
+/* 현재 보고 있는 메뉴 */
+.menuCurrent {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-bg);
+    font-weight: 700;
+}
+
+/* 아직 만들지 않은 메뉴 */
+.menuDisabled {
+    color: var(--color-muted);
+}
+
+/* 성별 탭 */
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tab {
+    padding: 8px 16px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-muted);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    color: var(--color-primary);
+}
+
+.tabActive {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.count {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--color-muted);
+}
+
+/* 의류 목록 표 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.table th,
+.table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    border-bottom: 1px solid var(--color-primary);
+    font-size: 12px;
+    color: var(--color-muted);
+    white-space: nowrap;
+}
+
+/* 관리자 목록은 어떤 상품인지 확인하는 화면이라 사진을 자르지 않고 전체를 보여 준다 */
+.image {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: var(--color-bg-sub);
+}
+
+.productBrand {
+    margin: 0 0 2px;
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.productName {
+    margin: 0 0 4px;
+    font-weight: 700;
+}
+
+.productCategory {
+    margin: 0;
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+/* 좁은 칸들은 줄바꿈 없이 최소 너비만 차지하고, 상품명 칸이 남는 폭을 가져간다 */
+.table th,
+.table td {
+    white-space: nowrap;
+    width: 1%;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: auto;
+    white-space: normal;
+}
+
+/* 사진 칸은 사진 크기만큼 자리를 잡는다 (좁아지면 사진이 눌린다) */
+.table th:first-child,
+.table td:first-child {
+    width: 64px;
+    min-width: 64px;
+}
+
+.state {
+    font-weight: 700;
+}
+
+.price {
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.discount {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-muted);
+}
+
+/* 사이즈별 재고: 사이즈마다 작은 칸으로 나눠 읽기 쉽게 한다 */
+.stockList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.stockItem {
+    display: flex;
+    gap: 4px;
+    padding: 3px 8px;
+    border: 1px solid var(--color-border);
+}
+
+.stockSize {
+    color: var(--color-muted);
+}
+
+/* 재고가 없는 사이즈는 흐리게 */
+.stockEmpty {
+    color: var(--color-muted);
+}
+
+/* 조회 · 수정 · 삭제 */
+.actions {
+    display: flex;
+    gap: 6px;
+}
+
+.actionButton {
+    padding: 6px 10px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 12px;
+    /* 좁은 칸에서도 글자가 세로로 쪼개지지 않게 한다 */
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.actionButton:hover:not(:disabled) {
+    border-color: var(--color-primary);
+}
+
+.actionButton:disabled {
+    color: var(--color-border);
+    cursor: default;
+}
+
+.empty {
+    padding: 60px 0;
+    color: var(--color-muted);
+    text-align: center;
+}
+
+/* 표 안의 안내 줄 */
+.table .empty {
+    white-space: normal;
+}
+
+/* 상품명 칸 제목과 돋보기 */
+.columnHead {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.searchButton {
+    display: flex;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.searchIcon {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+}
+
+/* 지금 걸려 있는 검색어 */
+.columnCurrent {
+    display: block;
+    margin-top: 4px;
+    color: var(--color-primary);
+    font-size: 11px;
+}
+
+/* 표 위의 검색 바: 닫혀 있어도 자리는 그대로 둬서 표가 밀리지 않게 한다 */
+.searchBar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-primary);
+}
+
+.searchHidden {
+    visibility: hidden;
+}
+
+.searchInput {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    background: none;
+    color: var(--color-text);
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-bottom-color: var(--color-primary);
+}
+
+.searchClose {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.searchClose:hover {
+    border-color: var(--color-primary);
+}
+
+/* 제목 칸은 위쪽에 맞춘다 */
+.table th {
+    vertical-align: top;
+}

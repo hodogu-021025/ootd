@@ -1,0 +1,102 @@
+/* 드롭다운의 위치 기준 */
+.menu {
+    position: relative;
+}
+
+/* 칸 제목 글자 자체가 버튼이다 */
+.titleButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.titleButton:hover {
+    color: var(--color-primary);
+}
+
+/* 밑줄은 제목 글자에만 넣는다 (세모에는 넣지 않는다) */
+.titleButton:hover .titleText {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* 조건을 고른 칸은 검정 굵은 글씨로 표시한다 */
+.titleActive {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.caret {
+    font-size: 14px;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.caretOpen {
+    transform: rotate(180deg);
+}
+
+/* 지금 고른 값 */
+.current {
+    display: block;
+    margin-top: 4px;
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+/* 제목 아래로 펼쳐지는 흰 카드 */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 5;
+    min-width: 130px;
+    margin: 0;
+    padding: 6px 0;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    list-style-type: none;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 14px;
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: var(--color-bg-sub);
+    color: var(--color-primary);
+}
+
+/* 지금 고른 항목 */
+.optionCurrent {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.check {
+    font-size: 12px;
+}

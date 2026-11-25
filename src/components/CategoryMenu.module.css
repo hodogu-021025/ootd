@@ -1,0 +1,145 @@
+.menu {
+    font-size: 14px;
+}
+
+/* 메뉴 버튼은 글자처럼 보이게 기본 버튼 모양을 없앤다 */
+.allButton,
+.categoryButton,
+.groupButton,
+.itemButton {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    font-size: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.allButton:hover,
+.categoryButton:hover,
+.groupButton:hover,
+.itemButton:hover {
+    color: var(--color-primary);
+}
+
+/* 전체와 초기화를 한 줄 양 끝에 둔다 */
+.allRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.allButton {
+    width: auto;
+    font-weight: 700;
+}
+
+/* 초기화: 작은 회색 글자, 커서를 올리면 검정 밑줄 */
+.resetButton {
+    padding: 4px 0;
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.resetButton:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.category {
+    padding: 12px 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.categoryButton {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.group {
+    margin-top: 6px;
+    padding-left: 10px;
+}
+
+/* 중분류 이름과 펼치기 화살표를 한 줄에 둔다 */
+.groupRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.groupButton {
+    font-weight: 700;
+}
+
+.toggleButton {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.toggleButton:hover {
+    color: var(--color-primary);
+}
+
+/* 펼치면 화살표가 위를 향한다 */
+.toggleOpen {
+    transform: rotate(180deg);
+}
+
+.items {
+    margin: 0;
+    padding: 0 0 0 10px;
+    list-style-type: none;
+}
+
+.itemButton {
+    font-size: 13px;
+}
+
+/* 선택한 분류는 검정 굵은 글씨 + 밑줄 */
+.active {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* 브랜드·계절 목록: 세부 항목과 같은 크기로 들여 쓴다 */
+.options {
+    margin: 6px 0 0;
+    padding: 0 0 0 10px;
+    list-style-type: none;
+}
+
+/* 이름 오른쪽의 의류 개수 */
+.optionCount {
+    margin-left: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-muted);
+}
+
+/* 목록을 접었을 때 보이는 고른 값 */
+.selectedOption {
+    margin: 4px 0 0;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+}

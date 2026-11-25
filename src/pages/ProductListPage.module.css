@@ -1,0 +1,150 @@
+.title {
+    margin: 0 0 24px;
+    /* 페이지 이동 시 이 제목으로 스크롤할 때 헤더에 가려지지 않게 한다 */
+    scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+/* 성별 탭: 테두리·배경 없이 글자만 두고, 아래로 쭉 이어지는 선 하나를 긋는다 */
+.tabs {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* 탭 한 칸: 이름 버튼 + 오른쪽 위 화살표 */
+.tabItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+    /* 선택 표시 밑줄이 아래 선과 겹치도록 1px 내린다 */
+    margin-bottom: -1px;
+    border-bottom: 2px solid transparent;
+}
+
+/* 이름 버튼은 테두리·배경 없이 글자만 보인다 */
+.tab {
+    padding: 12px 0;
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    color: var(--color-primary);
+}
+
+/* 선택한 탭은 검정 글씨 + 선 위에 겹치는 굵은 밑줄 */
+.tabItemActive {
+    border-bottom-color: var(--color-primary);
+}
+
+.tabItemActive .tab {
+    color: var(--color-primary);
+}
+
+/* 오른쪽 위 화살표: 누르면 해당 성별 페이지로 이동 */
+.tabArrow {
+    display: flex;
+    padding: 8px 2px 0;
+    color: var(--color-muted);
+}
+
+/* 선 두께는 stroke-width로 조절한다 */
+.tabArrowIcon {
+    width: 11px;
+    height: 11px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.tabArrow:hover {
+    color: var(--color-primary);
+}
+
+/* 한 줄에 4개씩 나열한다 (한 페이지 12개 = 가로 4 × 세로 3) */
+.grid {
+    display: grid;
+    /* minmax(0, 1fr): 긴 상품명 때문에 칸이 넓어지지 않고 네 칸이 항상 같은 폭이 되게 한다 */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px 16px;
+}
+
+.empty {
+    padding: 80px 0;
+    color: var(--color-muted);
+    text-align: center;
+}
+
+/* 카테고리 메뉴가 있는 화면: 왼쪽 메뉴 + 오른쪽 목록 */
+.layout {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* 따라오는 헤더 바로 아래에 붙는다 */
+.sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + 16px);
+}
+
+/* 성별 탭 줄 오른쪽 끝에 검색과 정렬 버튼을 붙여 둔다 */
+.tools {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+}
+
+/* 검색어와 결과 개수 */
+.searchSummary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.searchResult {
+    margin: 0;
+}
+
+.searchClear {
+    padding: 4px 10px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-muted);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.searchClear:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* 결과가 없을 때의 조건 초기화 버튼 */
+.emptyReset {
+    margin-top: 12px;
+    padding: 10px 24px;
+    border: 1px solid var(--color-primary);
+    background: var(--color-bg);
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.emptyReset:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}

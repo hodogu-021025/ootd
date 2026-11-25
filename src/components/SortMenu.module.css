@@ -1,0 +1,70 @@
+/* 드롭다운의 위치 기준 */
+.sortMenu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menuButton {
+    display: flex;
+    padding: 8px;
+    border: none;
+    background: none;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* 검은색 햄버거 아이콘 (돋보기와 같은 선 두께) */
+.menuIcon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+}
+
+/* 햄버거 버튼 아래 오른쪽 끝에 맞춰 펼쳐지는 흰 카드 */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    /* 상품 카드·사이드바 위에 보이되, 위에 붙는 헤더(z-index 10)보다는 아래에 둔다 */
+    z-index: 5;
+    min-width: 140px;
+    margin: 0;
+    padding: 6px 0;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    list-style-type: none;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: var(--color-bg-sub);
+    color: var(--color-primary);
+}
+
+/* 현재 정렬 기준은 검정 굵은 글씨 + 체크 표시 */
+.optionCurrent {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.check {
+    font-size: 13px;
+}
