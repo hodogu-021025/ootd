@@ -39,7 +39,7 @@ function OrderCard({ order, onCancel, findImage }) {
                     return (
                         <li key={`${item.productId}-${item.size}`} className={styles.item}>
                             {image
-                                ? <img src={image} alt="" className={styles.itemImage} />
+                                ? <img src={image} alt="" className={styles.itemImage} loading="lazy" decoding="async" />
                                 : <div className={styles.itemImage}></div>
                             }
 

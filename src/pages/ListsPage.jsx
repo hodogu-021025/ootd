@@ -41,7 +41,7 @@ function ListPreview({ items, emptyText }) {
                     {shown.map(item =>
                         <div key={item.key} className={styles.item}>
                             <div className={styles.itemImageBox}>
-                                {item.image && <img src={item.image} alt="" className={styles.itemImage} />}
+                                {item.image && <img src={item.image} alt="" className={styles.itemImage} loading="lazy" decoding="async" />}
                             </div>
 
                             <p className={styles.itemBrand}>{item.product ? item.product.brand : ''}</p>

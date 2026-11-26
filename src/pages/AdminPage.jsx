@@ -273,7 +273,7 @@ function AdminPage() {
                         {pageProducts.map(product =>
                             <tr key={product.id}>
                                 <td>
-                                    <img src={product.image} alt="" className={styles.image} />
+                                    <img src={product.image} alt="" className={styles.image} loading="lazy" decoding="async" />
                                 </td>
                                 <td>
                                     <p className={styles.productBrand}>{product.brand}</p>

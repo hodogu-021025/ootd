@@ -73,7 +73,7 @@ nginx(`nginx.conf`)는 파일이 없는 주소를 `index.html` 로 돌려 React 
 | `src/mocks` | 기초 데이터(JS 객체 배열, named export)와 사진 등록표 |
 | `src/utils` | localStorage 저장·읽기, 금액·정렬 계산 |
 | `src/image` | 로고·아이콘·상품 사진 (webp, 코드에서 import) |
-| `src/image/products` | mock.zip에서 받은 상품 사진 (webp) |
+| `src/image/products` | 상품 사진 (webp, Unsplash 무료 사진. 출처는 `CREDITS.md`) |
 | `src/styles` | 전역 CSS |
 | `public/ootd_logo.png` | 파비콘 (`index.html`에서 사용) |
 | `docs/md` | 단계별 설계·테스트·배포 문서 (원본 마크다운) |

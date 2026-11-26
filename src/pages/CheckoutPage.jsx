@@ -146,7 +146,7 @@ function CheckoutPage() {
 
                                 return (
                                     <li key={`${item.productId}-${item.size}`} className={styles.item}>
-                                        <img src={item.product.image} alt="" className={styles.itemImage} />
+                                        <img src={item.product.image} alt="" className={styles.itemImage} loading="lazy" decoding="async" />
 
                                         <div className={styles.itemInfo}>
                                             <p className={styles.itemBrand}>{item.product.brand}</p>

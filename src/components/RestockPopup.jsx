@@ -98,7 +98,7 @@ function RestockPopup() {
             <ul className={styles.list}>
                 {popupItems.map(item =>
                     <li key={`${item.productId}-${item.size}`} className={styles.item}>
-                        <img src={item.image} alt="" className={styles.image} />
+                        <img src={item.image} alt="" className={styles.image} loading="lazy" decoding="async" />
 
                         <div className={styles.info}>
                             <p className={styles.name}>{item.name}</p>

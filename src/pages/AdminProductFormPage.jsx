@@ -456,7 +456,7 @@ function AdminProductFormPage() {
                                         aria-pressed={name === form.imageName}
                                         title={name}
                                     >
-                                        <img src={getProductImage(name)} alt={name} className={styles.image} />
+                                        <img src={getProductImage(name)} alt={name} className={styles.image} loading="lazy" decoding="async" />
                                     </button>
                                 )}
                             </div>

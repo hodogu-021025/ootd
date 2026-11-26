@@ -12,55 +12,54 @@ export const genderLabels = {
 
 // 직접 이름을 정한 의류
 // 번호는 홈 화면 Today's OOTD 코디와 연결되어 있으므로 바꾸지 않는다
-// 1번: yena_·k_min 코디의 상의, 2번: yena_ 코디의 아우터
-// 23번: min_hyuk 코디의 상의, 24번·42번: min_hyuk 코디의 악세사리, 41번: k_min 코디의 악세사리
-// 99번: yena_ 코디의 악세사리, 100번: min_hyuk 코디의 하의, 101번: k_min 코디의 하의, 102번: yena_ 코디의 하의
-// (99번부터는 mock.zip 제품 뒤에 추가한 번호다)
-// 브랜드는 mock.zip 제품의 브랜드 중에서 골라 넣었고, stock(사이즈별 재고)은 1~30 사이로 임의로 정했다
+// 1번·102번: yena_ 코디의 상의·하의, 23번·100번: min_hyuk 코디의 상의·하의, 3번·101번: k_min 코디의 상의·하의
+// (코디에 연결된 상품 사진은 그 코디 사진에서 잘라 만들었다. 99번부터는 mock.zip 제품 뒤에 추가한 번호다)
+// 사진은 모두 Unsplash 무료 라이선스 사진이다 (출처: CREDITS.md). 브랜드는 실제 브랜드와 겹치지 않게 지은 가상의 이름이다
+// stock(사이즈별 재고)은 1~30 사이로 임의로 정했다
 // 카테고리는 mocks/categories.js의 대분류(category) > 중분류(group) > 세부 항목(item) 이름과 같게 적는다
 const namedProducts = [
     {
         id: 1,
         createdAt: '2026-06-25',
         imageName: 'women_01',
-        brand: '미쏘',
-        name: '빈티지 리본 레이스 탑',
+        brand: '오후세시',
+        name: '시어 칼라 블라우스',
         price: 27000,
         discountRate: 0,
         type: '상의',
         category: '상의',
         group: '블라우스',
-        item: '프릴',
+        item: '셔츠형',
         season: '봄·여름',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 4, M: 16, L: 12, XL: 16 },
         gender: 'women',
-        description: '레이스 브이넥과 가운데 리본 끈이 사랑스러운 화이트 탑. 잔잔한 주름 원단과 짧은 캡 소매로 봄·여름에 가볍게 입기 좋다.'
+        description: '비치는 얇은 원단의 라이트블루 칼라 블라우스. 하이웨이스트 팬츠에 넣어 입으면 단정한 봄 코디가 된다.'
     },
     {
         id: 2,
         createdAt: '2026-06-26',
         imageName: 'women_02',
-        brand: '유라고',
-        name: '슬림 롱 슬리브 코튼 가디건',
+        brand: '니트리',
+        name: '핑크 집업 니트 가디건',
         price: 19000,
         discountRate: 0,
         type: '아우터',
         category: '아우터',
         group: '가디건',
-        item: '롱 가디건',
+        item: '크롭 가디건',
         season: '봄·여름',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 9, M: 30, L: 4, XL: 5 },
         gender: 'women',
-        description: '얇게 비치는 골지 원단의 롱 슬리브 가디건. 슬림한 핏에 은은한 핑크 컬러로 캐미솔이나 민소매 위에 걸치기 좋다.'
+        description: '부드러운 골지 니트의 핑크 집업 가디건. 짧은 기장이라 쇼츠나 하이웨이스트 하의와 잘 어울린다.'
     },
     {
         id: 3,
         createdAt: '2026-06-27',
         imageName: 'women_03',
-        brand: '2000아카이브스',
-        name: '레이스 패치워크 크롭 탑',
+        brand: '모노결',
+        name: '슬림 블랙 캐미솔',
         price: 14900,
         discountRate: 0,
         type: '상의',
@@ -71,32 +70,32 @@ const namedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 29, M: 5, L: 7, XL: 10 },
         gender: 'women',
-        description: '브라운 바탕에 핑크 레이스를 위아래로 이어 붙인 크롭 탑. 몸에 붙는 골지 원단이라 가디건과 겹쳐 입기 좋다.'
+        description: '가는 끈의 블랙 캐미솔. 와이드 데님과 매치하면 여름 코디가 깔끔하게 완성된다.'
     },
     {
         id: 4,
         createdAt: '2026-06-28',
         imageName: 'women_04',
-        brand: '무신사 스탠다드 우먼',
-        name: '슬림핏 스트라이프 긴팔 티셔츠',
+        brand: '니트리',
+        name: '블랙 스트라이프 니트 풀오버',
         price: 12900,
         discountRate: 0,
         type: '상의',
         category: '상의',
-        group: '티셔츠',
+        group: '니트',
         item: '긴소매',
-        season: '봄·여름',
+        season: '가을·겨울',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 16, M: 5, L: 13, XL: 14 },
         gender: 'women',
-        description: '블랙과 그레이 줄무늬가 들어간 슬림핏 긴팔 티셔츠. 넓게 파인 스퀘어넥으로 목선이 깔끔해 보인다.'
+        description: '굵은 블랙·화이트 줄무늬의 루즈핏 니트. 도톰한 짜임이라 가을 산책에 한 장으로 입기 좋다.'
     },
     {
         id: 5,
         createdAt: '2026-06-29',
         imageName: 'women_05',
-        brand: '지프',
-        name: '빈티지 프린팅 레귤러 숄더 반팔 티셔츠',
+        brand: '모노결',
+        name: '레귤러핏 옐로 반팔 티셔츠',
         price: 10900,
         discountRate: 0,
         type: '상의',
@@ -107,32 +106,32 @@ const namedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 24, M: 21, L: 12, XL: 7 },
         gender: 'women',
-        description: '빈티지한 록 레터링과 기타 그림이 프린팅된 반팔 티셔츠. 골지 원단의 레귤러 숄더 핏으로 데님과 잘 어울린다.'
+        description: '선명한 옐로 컬러의 레귤러핏 반팔 티셔츠. 탄탄한 코튼 원단이라 한 장으로 입어도 깔끔하다.'
     },
     {
         id: 6,
         createdAt: '2026-06-30',
         imageName: 'women_06',
-        brand: '베리시',
-        name: '블랙 앤 화이트 올매치 여성 탑 티셔츠',
+        brand: '모노결',
+        name: '오버핏 블랙 반팔 티셔츠',
         price: 11900,
         discountRate: 0,
         type: '상의',
         category: '상의',
         group: '티셔츠',
-        item: '긴소매',
+        item: '반소매',
         season: '봄·가을',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 13, M: 8, L: 5, XL: 22 },
         gender: 'women',
-        description: '화이트 몸판에 블랙 소매를 이은 래글런 티셔츠. 가운데 별 프린팅이 포인트이고 어디에나 매치하기 좋은 블랙 앤 화이트 컬러다.'
+        description: '어깨선이 내려간 오버핏 블랙 티셔츠. 넉넉한 기장이라 레깅스나 쇼츠 위에 편하게 입는다.'
     },
     {
         id: 7,
         createdAt: '2026-07-01',
         imageName: 'women_07',
-        brand: '슈퍼서브',
-        name: '여성용 크롭 티셔츠',
+        brand: '오후세시',
+        name: '오렌지 크롭 반팔 티셔츠',
         price: 5900,
         discountRate: 0,
         type: '상의',
@@ -143,14 +142,14 @@ const namedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 24, M: 9, L: 3, XL: 12 },
         gender: 'women',
-        description: '몸에 적당히 붙는 화이트 크롭 티셔츠. 라운드넥과 짧은 기장으로 하이웨이스트 하의와 함께 입기 좋다.'
+        description: '허리선이 드러나는 기장의 오렌지 크롭 티셔츠. 하이웨이스트 팬츠와 함께 입으면 비율이 좋아 보인다.'
     },
     {
         id: 21,
         createdAt: '2026-07-02',
         imageName: 'men_01',
-        brand: '디키즈',
-        name: '캐주얼 맨해튼 그래픽 티셔츠',
+        brand: '모노결',
+        name: '베이직 화이트 반팔 티셔츠',
         price: 17900,
         discountRate: 0,
         type: '상의',
@@ -161,14 +160,14 @@ const namedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 8, M: 28, L: 20, XL: 20 },
         gender: 'men',
-        description: '블랙 바탕에 MANHATTAN 레터링과 NYC 로고를 새긴 그래픽 반팔 티셔츠. 넉넉한 핏으로 데님과 편하게 매치할 수 있다.'
+        description: '탄탄한 코튼으로 만든 기본 화이트 티셔츠. 이너로도 한 장으로도 입기 좋은 데일리 아이템.'
     },
     {
         id: 22,
         createdAt: '2026-07-03',
         imageName: 'men_02',
-        brand: '9999아카이브',
-        name: '빈티지 컬러 블록 긴팔 셔츠',
+        brand: '린넨노트',
+        name: '베이지 밴드카라 린넨 셔츠',
         price: 21900,
         discountRate: 0,
         type: '상의',
@@ -179,32 +178,32 @@ const namedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 6, M: 18, L: 11, XL: 8 },
         gender: 'men',
-        description: '블랙 몸판에 아이보리 카라를 대비시킨 컬러 블록 긴팔 셔츠. 슬랙스와 함께 깔끔한 캐주얼 룩을 만들기 좋다.'
+        description: '칼라를 세운 밴드카라 린넨 셔츠. 통기성이 좋아 여름에도 소매를 걷어 시원하게 입는다.'
     },
     {
         id: 23,
         createdAt: '2026-07-04',
         imageName: 'men_03',
-        brand: '무신사 스탠다드',
-        name: '오버사이즈 린넨 혼방 긴팔 셔츠',
+        brand: '린넨노트',
+        name: '딥퍼플 코튼 셔츠',
         price: 19900,
         discountRate: 0,
         type: '상의',
         category: '상의',
         group: '티셔츠',
         item: '긴소매',
-        season: '봄·여름',
+        season: '봄·가을',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 5, M: 19, L: 7, XL: 3 },
         gender: 'men',
-        description: '린넨 혼방 원단으로 가볍고 시원한 오버사이즈 긴팔 셔츠. 가슴 포켓이 있는 내추럴한 베이지 컬러로 소매를 걷어 입기 좋다.'
+        description: '가슴 포켓이 달린 딥퍼플 코튼 셔츠. 연청 데님과 함께 입으면 가을 데일리룩이 완성된다.'
     },
     {
         id: 24,
         createdAt: '2026-07-05',
         imageName: 'men_04',
-        brand: '리바이스',
-        name: '클래식 블랙 레더 벨트',
+        brand: '백앤로드',
+        name: '브라운 빈티지 레더 벨트',
         price: 12900,
         discountRate: 0,
         type: '악세사리',
@@ -215,14 +214,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 25 },
         gender: 'men',
-        description: '실버 핀 버클을 단 블랙 레더 벨트. 스티치 마감이 깔끔해 슬랙스와 데님 어디에나 어울린다.'
+        description: '자연스러운 사용감이 묻어나는 브라운 레더 벨트. 데님과 치노 어디에나 어울린다.'
     },
     {
         id: 41,
         createdAt: '2026-07-06',
         imageName: 'unisex_01',
-        brand: '오픈야드(오와이)',
-        name: '블랙 오벌 프레임 선글라스',
+        brand: '뷰파인더',
+        name: '브라운 뿔테 라운드 선글라스',
         price: 49000,
         discountRate: 0,
         type: '악세사리',
@@ -233,14 +232,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 3 },
         gender: 'unisex',
-        description: '작고 갸름한 오벌 프레임의 블랙 선글라스. 광택 있는 뿔테와 짙은 렌즈로 레트로한 분위기를 낸다.'
+        description: '브라운 뿔테에 짙은 렌즈를 넣은 라운드 선글라스. 얼굴형을 가리지 않고 잘 어울린다.'
     },
     {
         id: 42,
         createdAt: '2026-07-07',
         imageName: 'unisex_02',
-        brand: '마이초이도쿄',
-        name: '라운드 메탈 프레임 안경',
+        brand: '뷰파인더',
+        name: '실버 라운드 메탈 안경',
         price: 29000,
         discountRate: 0,
         type: '악세사리',
@@ -251,14 +250,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 27 },
         gender: 'unisex',
-        description: '가는 메탈 테의 큰 라운드 프레임 안경. 부드러운 로즈골드 컬러로 얼굴을 한층 부드럽게 보여 준다.'
+        description: '얇은 실버 메탈 테의 라운드 안경. 가볍고 무게감이 적어 오래 써도 편하다.'
     },
     {
         id: 43,
         createdAt: '2026-07-08',
         imageName: 'unisex_03',
-        brand: '브라운브레스',
-        name: '레터링 캔버스 D링 벨트',
+        brand: '백앤로드',
+        name: '올리브 스웨이드 벨트',
         price: 11900,
         discountRate: 0,
         type: '악세사리',
@@ -269,14 +268,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 5 },
         gender: 'unisex',
-        description: '영문 레터링이 프린팅된 화이트 캔버스 벨트. 실버 D링 버클로 길이를 자유롭게 조절하고, 길게 늘어뜨려 포인트로 연출하기 좋다.'
+        description: '부드러운 스웨이드 질감의 올리브 벨트. 앤티크 골드 버클이 은은한 포인트가 된다.'
     },
     {
         id: 99,
         createdAt: '2026-09-02',
         imageName: 'women_08',
-        brand: '2000아카이브스',
-        name: '실버 레더 숄더백',
+        brand: '백앤로드',
+        name: '아이보리 레더 크로스백',
         price: 32900,
         discountRate: 0,
         type: '악세사리',
@@ -287,32 +286,32 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 17 },
         gender: 'women',
-        description: '은은한 광택의 실버 레더 숄더백. 체인 스트랩 장식이 포인트다.'
+        description: '군더더기 없는 아이보리 레더 크로스백. 끈 길이를 조절해 숄더백으로도 멘다.'
     },
     {
         id: 100,
         createdAt: '2026-09-03',
         imageName: 'men_05',
-        brand: '무신사 스탠다드',
-        name: '세미와이드 투턱 슬랙스',
+        brand: '블루라인 데님',
+        name: '연청 스키니 데님',
         price: 32900,
         discountRate: 0,
         type: '하의',
         category: '하의',
         group: '긴바지',
-        item: '슬랙스',
+        item: '데님 팬츠',
         season: '사계절',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 13, M: 8, L: 2, XL: 17 },
         gender: 'men',
-        description: '앞주름 두 줄(투턱)로 여유 있게 떨어지는 세미와이드 핏 슬랙스. 셔츠와 운동화 어디에나 잘 어울리는 크림 컬러다.'
+        description: '밝은 연청 컬러의 스키니 데님. 진한 셔츠와 함께 입으면 대비가 살아난다.'
     },
     {
         id: 101,
         createdAt: '2026-09-04',
         imageName: 'women_09',
-        brand: '미쏘',
-        name: '사이드 핀턱 와이드 데님 팬츠',
+        brand: '블루라인 데님',
+        name: '하이웨이스트 와이드 데님',
         price: 31900,
         discountRate: 0,
         type: '하의',
@@ -323,33 +322,33 @@ const namedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 10, M: 5, L: 17, XL: 24 },
         gender: 'women',
-        description: '옆선의 핀턱 주름이 입체적인 실루엣을 만드는 와이드 데님 팬츠. 부드러운 베이지 컬러로 어떤 상의와도 잘 어울린다.'
+        description: '허리선이 높고 통이 넓은 미디엄 블루 데님. 캐미솔이나 짧은 상의와 함께 입으면 비율이 좋아 보인다.'
     },
     {
         id: 102,
         createdAt: '2026-09-05',
         imageName: 'women_10',
-        brand: '에잇세컨즈',
-        name: '엔트리 맘핏 데님 아이보리',
+        brand: '슬로우핏',
+        name: '투턱 베이지 와이드 슬랙스',
         price: 34900,
         discountRate: 0,
         type: '하의',
         category: '하의',
         group: '긴바지',
-        item: '데님 팬츠',
+        item: '와이드 팬츠',
         season: '사계절',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 3, M: 12, L: 10, XL: 15 },
         gender: 'women',
-        description: '허리는 높고 엉덩이와 허벅지는 여유 있는 맘핏 데님. 깨끗한 아이보리 컬러로 니트나 티셔츠와 가볍게 매치하기 좋다.'
+        description: '허리 턱 주름이 들어간 베이지 와이드 슬랙스. 셔츠나 블라우스를 넣어 입으면 단정한 출근룩이 된다.'
     },
     // 103~116번: OOTD사진 폴더의 악세사리 (정가·할인율은 함께 받은 상품 캡처 기준)
     {
         id: 103,
         createdAt: '2026-09-06',
         imageName: 'unisex_04',
-        brand: '커버낫',
-        name: '뉴 어센틱 31L 백팩 블랙',
+        brand: '백앤로드',
+        name: '블랙 데일리 백팩',
         price: 139900,
         discountRate: 0,
         type: '악세사리',
@@ -360,14 +359,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 27 },
         gender: 'unisex',
-        description: '노트북과 책이 넉넉히 들어가는 31L 대용량 백팩. 앞면의 스트링 디테일과 사이드 포켓이 있어 학생·직장인 데일리백으로 좋다.'
+        description: '군더더기 없는 디자인의 블랙 백팩. 노트북 수납 칸이 있어 출퇴근과 통학에 좋다.'
     },
     {
         id: 104,
         createdAt: '2026-09-07',
         imageName: 'unisex_05',
-        brand: '예일',
-        name: '예일 로고 대용량 백팩',
+        brand: '백앤로드',
+        name: '그레이 캔버스 백팩',
         price: 89000,
         discountRate: 15,
         type: '악세사리',
@@ -378,14 +377,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 22 },
         gender: 'unisex',
-        description: '앞면의 예일 로고와 스트링 장식이 포인트인 대용량 백팩. 남녀 누구나 메기 좋아 커플 가방으로도 잘 어울린다.'
+        description: '멜란지 그레이 캔버스로 만든 백팩. 앞주머니 지퍼가 있어 작은 소지품을 정리하기 좋다.'
     },
     {
         id: 105,
         createdAt: '2026-09-08',
         imageName: 'unisex_06',
-        brand: '모린',
-        name: '메탈 로고 컴팩트 숄더백',
+        brand: '백앤로드',
+        name: '블랙 미니 크로스백',
         price: 82600,
         discountRate: 53,
         type: '악세사리',
@@ -396,14 +395,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 8 },
         gender: 'unisex',
-        description: '광택 있는 블랙 레더에 메탈 로고를 단 컴팩트 숄더백. 어깨에 가볍게 걸쳐 휴대폰과 지갑을 넣고 다니기 좋다.'
+        description: '지퍼 포켓이 달린 블랙 미니 크로스백. 지갑과 휴대폰만 챙겨 가볍게 나갈 때 좋다.'
     },
     {
         id: 106,
         createdAt: '2026-09-09',
         imageName: 'unisex_07',
-        brand: '오에스티',
-        name: '스파크 슬림 이니셜 각인 커플반지',
+        brand: '은결',
+        name: '실버 커플링 세트',
         price: 12500,
         discountRate: 0,
         type: '악세사리',
@@ -414,50 +413,50 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 22 },
         gender: 'unisex',
-        description: '2mm 두께의 슬림한 써지컬 스틸 반지로, 반짝이는 스파크 무늬와 이니셜 각인이 들어간다. 두 개가 한 세트라 커플링·우정링으로 좋다.'
+        description: '두께가 다른 실버 밴드 두 개로 구성한 커플링. 매끈한 마감이라 매일 껴도 부담이 없다.'
     },
     {
         id: 107,
         createdAt: '2026-09-10',
         imageName: 'unisex_08',
-        brand: '브라운브레스',
-        name: '레터링 니트 비니',
+        brand: '캡앤노트',
+        name: '레드 골지 비니',
         price: 33800,
         discountRate: 33,
         type: '악세사리',
         category: '악세사리',
         group: '모자',
         item: '비니',
-        season: '사계절',
+        season: '가을·겨울',
         sizes: ['FREE'],
         stock: { FREE: 20 },
         gender: 'unisex',
-        description: '머리에 부드럽게 감기는 니트 비니. 레터링 자수가 들어간 블랙과 차분한 그레이 컬러로 커플룩 연출에 좋다.'
+        description: '선명한 레드 컬러의 골지 비니. 접어서 쓰면 짧게, 펴서 쓰면 길게 연출할 수 있다.'
     },
     {
         id: 108,
         createdAt: '2026-09-11',
         imageName: 'unisex_09',
-        brand: '47브랜드',
-        name: 'MLB NY 양키스 스몰 로고 볼캡',
+        brand: '캡앤노트',
+        name: '린넨 베이지 볼캡',
         price: 65800,
         discountRate: 59,
         type: '악세사리',
         category: '악세사리',
         group: '모자',
         item: '볼캡',
-        season: '사계절',
+        season: '봄·여름',
         sizes: ['FREE'],
         stock: { FREE: 6 },
         gender: 'unisex',
-        description: '앞면에 NY 스몰 로고를 수놓은 워싱 볼캡. 부드러운 챙과 코랄 컬러로 얼굴을 화사하게 밝혀 준다.'
+        description: '통기성 좋은 린넨 원단의 베이지 볼캡. 로고 없는 깔끔한 디자인이라 어디에나 어울린다.'
     },
     {
         id: 109,
         createdAt: '2026-09-12',
         imageName: 'unisex_10',
-        brand: '나이키',
-        name: '클럽 언스트럭처 스우시 볼캡',
+        brand: '캡앤노트',
+        name: '네이비 데님 볼캡',
         price: 45000,
         discountRate: 48,
         type: '악세사리',
@@ -468,14 +467,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 19 },
         gender: 'unisex',
-        description: '구조가 부드러운 언스트럭처 볼캡에 스우시 로고를 수놓았다. 블랙 컬러로 어떤 옷차림에도 무난하게 어울린다.'
+        description: '부드럽게 워싱한 네이비 데님 볼캡. 뒤쪽 버클로 머리 둘레를 조절한다.'
     },
     {
         id: 110,
         createdAt: '2026-09-13',
         imageName: 'unisex_11',
-        brand: '9999아카이브',
-        name: '로프 체인 팔찌 4mm',
+        brand: '루미에',
+        name: '골드 링크 체인 팔찌',
         price: 22000,
         discountRate: 37,
         type: '악세사리',
@@ -486,14 +485,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 28 },
         gender: 'unisex',
-        description: '밧줄처럼 꼬인 4mm 로프 체인 팔찌. 녹이 잘 슬지 않는 써지컬 소재로 매일 차기 좋다.'
+        description: '길쭉한 고리를 이어 만든 골드 체인 팔찌. 손목에 가볍게 걸쳐 데일리로 하기 좋다.'
     },
     {
         id: 111,
         createdAt: '2026-09-14',
         imageName: 'women_11',
-        brand: '오에스티',
-        name: '베이직 원터치 실버 귀걸이 19mm',
+        brand: '은결',
+        name: '실버 원터치 링 귀걸이',
         price: 79900,
         discountRate: 3,
         type: '악세사리',
@@ -504,14 +503,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 25 },
         gender: 'women',
-        description: '도톰하고 매끈한 19mm 실버 링 귀걸이. 원터치 잠금이라 착용이 쉽고 어떤 옷에도 잘 어울린다.'
+        description: '도톰한 볼륨의 실버 링 귀걸이. 원터치 잠금이라 혼자서도 쉽게 착용한다.'
     },
     {
         id: 112,
         createdAt: '2026-09-15',
         imageName: 'women_12',
-        brand: '골드앤디어',
-        name: '14KGF 스티치 큐빅 크로스 귀걸이',
+        brand: '루미에',
+        name: '티어드롭 큐빅 드롭 귀걸이',
         price: 64500,
         discountRate: 62,
         type: '악세사리',
@@ -522,14 +521,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 20 },
         gender: 'women',
-        description: '골드 라인과 큐빅 라인이 교차하는 크로스 귀걸이. 14K 골드필드 소재라 알레르기 걱정이 적다.'
+        description: '물방울 모양 라인에 큐빅을 촘촘히 박은 드롭 귀걸이. 움직일 때마다 은은하게 반짝인다.'
     },
     {
         id: 113,
         createdAt: '2026-09-16',
         imageName: 'women_13',
-        brand: '오에스티',
-        name: '볼륨 하트 목걸이',
+        brand: '루미에',
+        name: '하트 라인 큐빅 목걸이',
         price: 22400,
         discountRate: 55,
         type: '악세사리',
@@ -540,14 +539,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 24 },
         gender: 'women',
-        description: '도톰한 볼륨 하트 펜던트를 단 실버 체인 목걸이. 진주 목걸이와 레이어드하면 더 사랑스럽다.'
+        description: '하트 테두리를 큐빅으로 채운 목걸이. 쇄골 위로 떨어지는 길이라 어떤 넥라인에도 어울린다.'
     },
     {
         id: 114,
         createdAt: '2026-09-17',
         imageName: 'women_14',
-        brand: '스와로브스키',
-        name: '스완 펜던트 목걸이',
+        brand: '루미에',
+        name: '진주 링 펜던트 목걸이',
         price: 209000,
         discountRate: 31,
         type: '악세사리',
@@ -558,14 +557,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 24 },
         gender: 'women',
-        description: '반짝이는 크리스털 스완 펜던트의 로즈골드 목걸이. 가는 체인으로 목선을 우아하게 밝혀 준다.'
+        description: '진주를 링이 감싼 펜던트 목걸이. 가는 체인이라 단독으로도 레이어드로도 좋다.'
     },
     {
         id: 115,
         createdAt: '2026-09-18',
         imageName: 'women_15',
-        brand: '골드앤디어',
-        name: '14KGP 데일리 심플 반지',
+        brand: '은결',
+        name: '해머드 실버 밴드 반지',
         price: 46900,
         discountRate: 46,
         type: '악세사리',
@@ -576,14 +575,14 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 19 },
         gender: 'women',
-        description: '매끈한 골드 라인의 심플 반지. 14K 골드 도금으로 은은하게 빛나고 다른 반지와 겹쳐 끼기 좋다.'
+        description: '두드린 결이 살아 있는 실버 밴드 반지. 두께감이 있어 단독으로 껴도 존재감이 있다.'
     },
     {
         id: 116,
         createdAt: '2026-09-19',
         imageName: 'women_16',
-        brand: '골드앤디어',
-        name: '행운이 머무르는 곳 클로버 팔찌',
+        brand: '은결',
+        name: '하트 링크 체인 팔찌',
         price: 14700,
         discountRate: 0,
         type: '악세사리',
@@ -594,12 +593,12 @@ const namedProducts = [
         sizes: ['FREE'],
         stock: { FREE: 18 },
         gender: 'women',
-        description: '작은 큐빅 클로버 장식이 이어진 로즈골드 체인 팔찌. 손목을 가늘고 여리여리하게 보여 준다.'
+        description: '하트 고리와 핑크 스톤이 이어진 실버 체인 팔찌. 가는 손목에 가볍게 떨어진다.'
     }
 ];
 
-// mock.zip에서 가져온 의류 (44번부터 차례로 번호를 붙였다)
-// 사진은 src/image/products/product_번호.webp, 원본은 backup/mock-zip에 있다
+// mock.zip 목록을 바탕으로 만든 의류 (44번부터 차례로 번호를 붙였다)
+// 사진은 src/image/products/product_번호.webp 이고, 이름·설명·브랜드는 바꾼 사진에 맞춰 새로 썼다
 // stock: 사이즈별 재고 수량
 // 받은 파일에서 긴소매로 분류된 니트·스웨터(52·54·78·81·82·83번)는 니트로 옮겼다 (52번은 2종 중 브이넥)
 // 성별·사진까지 똑같이 중복된 5개(받은 파일의 31·35·46·48·57번)는 한 번만 넣었다
@@ -608,8 +607,8 @@ const importedProducts = [
         id: 44,
         createdAt: '2026-07-09',
         imageName: 'products/product_44',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Layered Henley Neck Tee Dark M.Grey',
+        brand: '모노결',
+        name: '블랙 슬림 긴팔 티셔츠',
         price: 113000,
         discountRate: 0,
         type: '상의',
@@ -620,33 +619,51 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 77, M: 10, L: 81, XL: 97 },
         gender: 'men',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Layered Henley Neck Tee Dark M.Grey.'
+        description: '몸에 적당히 붙는 블랙 긴팔 티셔츠. 데님과 함께 입으면 깔끔한 기본 코디가 된다.'
     },
     {
         id: 45,
         createdAt: '2026-07-10',
         imageName: 'products/product_45',
-        brand: '제네시스 마그마 레이싱',
-        name: 'GMR X MUSINSA 26 JERSEY',
+        brand: '린넨노트',
+        name: '네이비 도트 반팔 셔츠',
         price: 89000,
         discountRate: 0,
         type: '상의',
         category: '상의',
         group: '티셔츠',
         item: '반소매',
-        season: '사계절',
+        season: '봄·여름',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 35, M: 38, L: 54, XL: 56 },
         gender: 'men',
-        description: '제네시스 마그마 레이싱(GMR) GMR X MUSINSA 26 JERSEY.'
+        description: '잔잔한 도트 패턴의 네이비 반팔 셔츠. 베이지 치노와 매치하면 여름 캐주얼로 좋다.'
     },
     {
         id: 46,
         createdAt: '2026-07-11',
         imageName: 'products/product_46',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Regular Shirt Check Dusty Red',
+        brand: '린넨노트',
+        name: '레드 체크 오버셔츠',
         price: 173000,
+        discountRate: 0,
+        type: '상의',
+        category: '상의',
+        group: '티셔츠',
+        item: '카라',
+        season: '가을·겨울',
+        sizes: ['S', 'M', 'L', 'XL'],
+        stock: { S: 93, M: 90, L: 48, XL: 22 },
+        gender: 'unisex',
+        description: '레드와 화이트 체크가 선명한 도톰한 오버셔츠. 셔츠로도 가벼운 아우터로도 입는다.'
+    },
+    {
+        id: 47,
+        createdAt: '2026-07-12',
+        imageName: 'products/product_47',
+        brand: '린넨노트',
+        name: '블루 체크 셔츠',
+        price: 132050,
         discountRate: 0,
         type: '상의',
         category: '상의',
@@ -654,34 +671,16 @@ const importedProducts = [
         item: '카라',
         season: '사계절',
         sizes: ['S', 'M', 'L', 'XL'],
-        stock: { S: 93, M: 90, L: 48, XL: 22 },
-        gender: 'unisex',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Regular Shirt Check Dusty Red.'
-    },
-    {
-        id: 47,
-        createdAt: '2026-07-12',
-        imageName: 'products/product_47',
-        brand: '미즈노',
-        name: 'ROUND WOVEN PISTE_32YE6F40',
-        price: 132050,
-        discountRate: 0,
-        type: '상의',
-        category: '상의',
-        group: '티셔츠',
-        item: '긴소매',
-        season: '사계절',
-        sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 79, M: 52, L: 45, XL: 64 },
         gender: 'men',
-        description: '미즈노(MIZUNO) ROUND WOVEN PISTE_32YE6F40.'
+        description: '화이트 바탕에 블루 체크가 들어간 긴팔 셔츠. 단추를 풀어 티셔츠 위에 걸쳐도 좋다.'
     },
     {
         id: 48,
         createdAt: '2026-07-13',
         imageName: 'products/product_48',
-        brand: '트릴리온',
-        name: '[기획] 에센셜 CP 이중지 크롭 긴팔티_7color',
+        brand: '모노결',
+        name: '화이트 크루넥 긴팔 티셔츠',
         price: 19990,
         discountRate: 0,
         type: '상의',
@@ -692,14 +691,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 22, M: 66, L: 19, XL: 71 },
         gender: 'men',
-        description: '트릴리온(TRILLION) [기획] 에센셜 CP 이중지 크롭 긴팔티_7color.'
+        description: '목둘레가 단정한 화이트 긴팔 티셔츠. 사계절 내내 이너로 활용하기 좋다.'
     },
     {
         id: 49,
         createdAt: '2026-07-14',
         imageName: 'products/product_49',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 VTG Horseshoe Tee Black',
+        brand: '모노결',
+        name: '베이직 반팔 티셔츠 6컬러',
         price: 79000,
         discountRate: 0,
         type: '상의',
@@ -710,68 +709,68 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 37, M: 23, L: 1, XL: 35 },
         gender: 'men',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 VTG Horseshoe Tee Black.'
+        description: '레드·블랙·화이트·네이비·버건디·옐로 여섯 가지 색의 기본 반팔 티셔츠. 여러 장 두고 돌려 입기 좋다.'
     },
     {
         id: 50,
         createdAt: '2026-07-15',
         imageName: 'products/product_50',
-        brand: '무신사 스탠다드',
-        name: '쿼터 집 스웨트셔츠 [블랙]',
+        brand: '코지룸',
+        name: '민트 라운드 맨투맨',
         price: 49900,
         discountRate: 0,
         type: '상의',
         category: '상의',
         group: '티셔츠',
         item: '긴소매',
-        season: '사계절',
+        season: '봄·가을',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 10, M: 56, L: 17, XL: 60 },
         gender: 'men',
-        description: '무신사 스탠다드(MUSINSA STANDARD) 쿼터 집 스웨트셔츠 [블랙].'
+        description: '부드러운 민트 컬러의 라운드 맨투맨. 도톰한 원단이라 간절기에 한 장으로 입기 좋다.'
     },
     {
         id: 51,
         createdAt: '2026-07-16',
         imageName: 'products/product_51',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 VTG Horseshoe Tee Graphite',
+        brand: '코지룸',
+        name: '블랙 오버핏 맨투맨',
         price: 79000,
         discountRate: 0,
         type: '상의',
         category: '상의',
-        group: '티셔츠',
-        item: '반소매',
+        group: '맨투맨·후드',
+        item: '맨투맨',
         season: '사계절',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 13, M: 54, L: 24, XL: 48 },
         gender: 'unisex',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 VTG Horseshoe Tee Graphite.'
+        description: '드롭숄더 핏의 블랙 맨투맨. 실버 체인 목걸이와 함께 입으면 스트리트 무드가 난다.'
     },
     {
         id: 52,
         createdAt: '2026-07-17',
         imageName: 'products/product_52',
-        brand: '수아레',
-        name: '파인 메리노 울 100 니트 (2종)',
+        brand: '니트리',
+        name: '로우게이지 라운드 니트 2컬러',
         price: 59310,
         discountRate: 0,
         type: '상의',
         category: '상의',
         group: '니트',
-        item: '브이넥',
+        item: '라운드넥',
         season: '가을·겨울',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 19, M: 93, L: 38, XL: 83 },
         gender: 'unisex',
-        description: '수아레(SUARE) 파인 메리노 울 100 니트 (2종).'
+        description: '굵은 실로 짠 로우게이지 니트. 그레이와 머스터드 두 가지 색으로 준비했다.'
     },
     {
         id: 53,
         createdAt: '2026-07-18',
         imageName: 'products/product_53',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 VTG Horseshoe Tee M.Grey',
+        brand: '모노결',
+        name: '옐로 레귤러 반팔 티셔츠',
         price: 79000,
         discountRate: 0,
         type: '상의',
@@ -782,14 +781,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 32, M: 91, L: 67, XL: 22 },
         gender: 'men',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 VTG Horseshoe Tee M.Grey.'
+        description: '밝은 옐로 컬러의 레귤러핏 반팔 티셔츠. 짙은 데님과 함께 입으면 포인트가 된다.'
     },
     {
         id: 54,
         createdAt: '2026-07-19',
         imageName: 'products/product_54',
-        brand: '알리스',
-        name: '데님 레이어드 크롭 니트 풀오버 [미드블루]',
+        brand: '니트리',
+        name: '네이비 멜란지 라운드 니트',
         price: 66600,
         discountRate: 0,
         type: '상의',
@@ -800,50 +799,50 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 98, M: 15, L: 32, XL: 25 },
         gender: 'men',
-        description: '알리스(ALYSS) 데님 레이어드 크롭 니트 풀오버 [미드블루].'
+        description: '잔잔한 멜란지 짜임의 네이비 니트. 셔츠 위에 겹쳐 입으면 깔끔한 가을 코디가 된다.'
     },
     {
         id: 55,
         createdAt: '2026-07-20',
         imageName: 'products/product_55',
-        brand: '데이',
-        name: '세미크롭 골지 긴팔 헨리넥 티셔츠_5 COLOR',
+        brand: '니트리',
+        name: '크림 와플 라운드 니트',
         price: 27370,
         discountRate: 0,
         type: '상의',
         category: '상의',
-        group: '티셔츠',
+        group: '니트',
         item: '긴소매',
-        season: '사계절',
+        season: '봄·가을',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 60, M: 68, L: 23, XL: 23 },
         gender: 'men',
-        description: '데이(THEY) 세미크롭 골지 긴팔 헨리넥 티셔츠_5 COLOR.'
+        description: '와플 짜임이 은은한 크림색 니트. 가벼운 두께라 봄·가을에 한 장으로 입기 좋다.'
     },
     {
         id: 56,
         createdAt: '2026-07-21',
         imageName: 'products/product_56',
-        brand: '9999아카이브',
-        name: 'Echo Slub Raglan Long Sleeve',
+        brand: '포그웨어',
+        name: '다크그린 케이블 니트',
         price: 54400,
         discountRate: 0,
         type: '상의',
         category: '상의',
-        group: '티셔츠',
+        group: '니트',
         item: '긴소매',
-        season: '사계절',
+        season: '가을·겨울',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 47, M: 32, L: 89, XL: 77 },
         gender: 'men',
-        description: '9999아카이브(9999ARCHIVE) Echo Slub Raglan Long Sleeve.'
+        description: '굵은 꽈배기 짜임의 다크그린 니트. 울 혼방이라 한겨울에도 따뜻하다.'
     },
     {
         id: 57,
         createdAt: '2026-07-22',
         imageName: 'products/product_57',
-        brand: '수아레',
-        name: '[젠플록스X수아레] 데일리 라운드 크롭 가디건 - 5 COLOR',
+        brand: '포그웨어',
+        name: '차콜 브이넥 가디건',
         price: 35910,
         discountRate: 0,
         type: '아우터',
@@ -854,14 +853,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 98, M: 25, L: 46, XL: 1 },
         gender: 'men',
-        description: '수아레(SUARE) [젠플록스X수아레] 데일리 라운드 크롭 가디건 - 5 COLOR.'
+        description: '단추로 여미는 차콜 브이넥 가디건. 셔츠와 타이 위에 걸치면 클래식한 분위기가 난다.'
     },
     {
         id: 58,
         createdAt: '2026-07-23',
         imageName: 'products/product_58',
-        brand: '데이',
-        name: '레이어드 골지 헨리넥 티셔츠_4 COLOR',
+        brand: '모노결',
+        name: '아이보리 와플 긴팔 티셔츠',
         price: 35750,
         discountRate: 0,
         type: '상의',
@@ -872,32 +871,32 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 49, M: 98, L: 24, XL: 30 },
         gender: 'men',
-        description: '데이(THEY) 레이어드 골지 헨리넥 티셔츠_4 COLOR.'
+        description: '와플 조직의 아이보리 긴팔 티셔츠. 와이드 데님과 함께 편안한 주말 코디로 좋다.'
     },
     {
         id: 59,
         createdAt: '2026-07-24',
         imageName: 'products/product_59',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Zip Cargo Work Pants Bleached Black',
+        brand: '트랙하우스',
+        name: '라이트그레이 와이드 카고 팬츠',
         price: 219000,
         discountRate: 0,
         type: '하의',
         category: '하의',
         group: '긴바지',
-        item: '코튼 팬츠',
+        item: '카고 팬츠',
         season: '사계절',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 54, M: 25, L: 73, XL: 12 },
         gender: 'unisex',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Zip Cargo Work Pants Bleached Black.'
+        description: '통이 넓은 라이트그레이 카고 팬츠. 바닥까지 떨어지는 기장이라 루즈한 스트리트룩에 좋다.'
     },
     {
         id: 60,
         createdAt: '2026-07-25',
         imageName: 'products/product_60',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Dis Jeans Aged Blue',
+        brand: '블루라인 데님',
+        name: '미디엄 워싱 레귤러 데님',
         price: 179000,
         discountRate: 0,
         type: '하의',
@@ -908,14 +907,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 80, M: 12, L: 25, XL: 48 },
         gender: 'unisex',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Dis Jeans Aged Blue.'
+        description: '자연스러운 미디엄 워싱의 레귤러핏 데님. 남녀 모두 편하게 입을 수 있는 기본 핏.'
     },
     {
         id: 61,
         createdAt: '2026-07-26',
         imageName: 'products/product_61',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Blank Jeans Deep Blue',
+        brand: '블루라인 데님',
+        name: '딥블루 스트레이트 데님',
         price: 179000,
         discountRate: 0,
         type: '하의',
@@ -926,14 +925,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 72, M: 77, L: 50, XL: 26 },
         gender: 'unisex',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Blank Jeans Deep Blue.'
+        description: '짙은 블루 컬러의 스트레이트 데님. 탄탄한 원단이라 오래 입어도 형태가 잘 유지된다.'
     },
     {
         id: 62,
         createdAt: '2026-07-27',
         imageName: 'products/product_62',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Wide Curve Carpenter Jeans Dusty Black',
+        brand: '블루라인 데님',
+        name: '인디고 스트레이트 데님',
         price: 179000,
         discountRate: 0,
         type: '하의',
@@ -944,14 +943,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 32, M: 52, L: 5, XL: 63 },
         gender: 'men',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Wide Curve Carpenter Jeans Dusty Black.'
+        description: '짙은 인디고 컬러의 스트레이트 데님. 곧은 실루엣이라 어떤 신발과도 잘 어울린다.'
     },
     {
         id: 63,
         createdAt: '2026-07-28',
         imageName: 'products/product_63',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Wide Curve Carpenter Pants Black',
+        brand: '트랙하우스',
+        name: '차콜 워크 카고 팬츠',
         price: 169000,
         discountRate: 0,
         type: '하의',
@@ -962,14 +961,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 64, M: 28, L: 30, XL: 55 },
         gender: 'men',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Wide Curve Carpenter Pants Black.'
+        description: '튼튼한 코튼 원단의 차콜 카고 팬츠. 넉넉한 사이드 포켓이 실용적이다.'
     },
     {
         id: 64,
         createdAt: '2026-07-29',
         imageName: 'products/product_64',
-        brand: '알리스',
-        name: '[NERDKING x ALYSS] 슬릭 커브드 코튼 치노 팬츠_4COLOR',
+        brand: '슬로우핏',
+        name: '라이트그레이 슬림 치노',
         price: 59200,
         discountRate: 0,
         type: '하의',
@@ -980,14 +979,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 12, M: 24, L: 90, XL: 93 },
         gender: 'men',
-        description: '알리스(ALYSS) [NERDKING x ALYSS] 슬릭 커브드 코튼 치노 팬츠_4COLOR.'
+        description: '신축성 있는 원단의 라이트그레이 슬림 치노. 블랙 티셔츠와 함께 단정하게 입기 좋다.'
     },
     {
         id: 65,
         createdAt: '2026-07-30',
         imageName: 'products/product_65',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Blank Jeans Jet Black',
+        brand: '블루라인 데님',
+        name: '로우 데님 롤업 팬츠',
         price: 179000,
         discountRate: 0,
         type: '하의',
@@ -998,14 +997,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 83, M: 40, L: 50, XL: 39 },
         gender: 'men',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Blank Jeans Jet Black.'
+        description: '워싱을 거의 하지 않은 짙은 로우 데님. 밑단을 접어 입으면 빈티지한 분위기가 난다.'
     },
     {
         id: 66,
         createdAt: '2026-07-31',
         imageName: 'products/product_66',
-        brand: '리바이스',
-        name: '트위스티드 배기 와이드 레그 진 008SH-0001',
+        brand: '블루라인 데님',
+        name: '라이트 워싱 슬림 데님',
         price: 186150,
         discountRate: 0,
         type: '하의',
@@ -1016,14 +1015,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 3, M: 86, L: 9, XL: 53 },
         gender: 'men',
-        description: "리바이스(LEVI'S) 트위스티드 배기 와이드 레그 진 008SH-0001."
+        description: '밝은 워싱의 슬림 데님. 블랙 스니커즈와 함께 입으면 캐주얼한 데일리룩이 된다.'
     },
     {
         id: 67,
         createdAt: '2026-08-01',
         imageName: 'products/product_67',
-        brand: '다이브인',
-        name: '[DIVEIN X 무민서] WASHED VERN CARGO PANTS (KHAKI)',
+        brand: '트랙하우스',
+        name: '올리브 카고 팬츠',
         price: 119000,
         discountRate: 0,
         type: '하의',
@@ -1034,14 +1033,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 54, M: 27, L: 46, XL: 59 },
         gender: 'men',
-        description: '다이브인(DIVEIN) [DIVEIN X 무민서] WASHED VERN CARGO PANTS (KHAKI).'
+        description: '자연스러운 올리브 컬러의 카고 팬츠. 체크 셔츠와 함께 아웃도어 무드로 입기 좋다.'
     },
     {
         id: 68,
         createdAt: '2026-08-02',
         imageName: 'products/product_68',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Dis Jeans Aged Black',
+        brand: '블루라인 데님',
+        name: '버튼플라이 데님 2컬러',
         price: 179000,
         discountRate: 0,
         type: '하의',
@@ -1052,14 +1051,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 16, M: 9, L: 65, XL: 86 },
         gender: 'men',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Dis Jeans Aged Black.'
+        description: '단추로 여미는 버튼플라이 데님. 블랙과 라이트 블루 두 가지 색으로 준비했다.'
     },
     {
         id: 69,
         createdAt: '2026-08-03',
         imageName: 'products/product_69',
-        brand: '글런든',
-        name: '[글런든 X 서진] 워시드 와이드 치노 팬츠 (OLIVE)_GCCUWPT01OL',
+        brand: '슬로우핏',
+        name: '베이지 코튼 치노',
         price: 127680,
         discountRate: 0,
         type: '하의',
@@ -1070,14 +1069,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 4, M: 76, L: 37, XL: 8 },
         gender: 'unisex',
-        description: '글런든(GRUNDEN) [글런든 X 서진] 워시드 와이드 치노 팬츠 (OLIVE)_GCCUWPT01OL.'
+        description: '부드러운 베이지 컬러의 코튼 치노. 화이트 셔츠와 매치하면 깔끔한 캐주얼이 된다.'
     },
     {
         id: 70,
         createdAt: '2026-08-04',
         imageName: 'products/product_70',
-        brand: '알리스',
-        name: '[NERDKING x ALYSS] 슬릭 세미와이드 코튼 치노 팬츠_3COLOR',
+        brand: '슬로우핏',
+        name: '베이지 세미와이드 치노',
         price: 59200,
         discountRate: 0,
         type: '하의',
@@ -1088,14 +1087,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 14, M: 19, L: 19, XL: 27 },
         gender: 'men',
-        description: '알리스(ALYSS) [NERDKING x ALYSS] 슬릭 세미와이드 코튼 치노 팬츠_3COLOR.'
+        description: '통이 적당히 넓은 베이지 세미와이드 치노. 블랙 반팔 셔츠와 매치하면 깔끔하다.'
     },
     {
         id: 71,
         createdAt: '2026-08-05',
         imageName: 'products/product_71',
-        brand: '룰루레몬',
-        name: '패스트 앤 프리 라인드 러닝 쇼츠 5inch *업데이트 디자인',
+        brand: '트랙하우스',
+        name: '그레이 러닝 쇼츠 5인치',
         price: 125000,
         discountRate: 0,
         type: '하의',
@@ -1106,14 +1105,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 5, M: 85, L: 92, XL: 30 },
         gender: 'men',
-        description: '룰루레몬(LULULEMON) 패스트 앤 프리 라인드 러닝 쇼츠 5inch *업데이트 디자인.'
+        description: '가볍고 빨리 마르는 원단의 그레이 러닝 쇼츠. 안쪽 이너가 있어 달릴 때 편하다.'
     },
     {
         id: 72,
         createdAt: '2026-08-06',
         imageName: 'products/product_72',
-        brand: '디미트리블랙',
-        name: 'VLAD 원턱 커브드 트랙 스웻 팬츠_(3심볼) 3 COLOR',
+        brand: '트랙하우스',
+        name: '레드 스웨트 조거',
         price: 29900,
         discountRate: 0,
         type: '하의',
@@ -1124,14 +1123,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 21, M: 14, L: 25, XL: 68 },
         gender: 'unisex',
-        description: '디미트리블랙(DIMITRI BLACK) VLAD 원턱 커브드 트랙 스웻 팬츠_(3심볼) 3 COLOR.'
+        description: '선명한 레드 컬러의 스웨트 조거. 허리끈과 밑단 밴딩이라 활동하기 편하다.'
     },
     {
         id: 73,
         createdAt: '2026-08-07',
         imageName: 'products/product_73',
-        brand: '룰루레몬',
-        name: '패스트 앤 프리 라인드 러닝 쇼츠 5inch *업데이트 디자인',
+        brand: '트랙하우스',
+        name: '베이지 트레이닝 쇼츠',
         price: 125000,
         discountRate: 0,
         type: '하의',
@@ -1142,50 +1141,50 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 26, M: 20, L: 70, XL: 45 },
         gender: 'men',
-        description: '룰루레몬(LULULEMON) 패스트 앤 프리 라인드 러닝 쇼츠 5inch *업데이트 디자인.'
+        description: '허리 밴딩의 베이지 트레이닝 쇼츠. 운동할 때도 산책할 때도 편하게 입는다.'
     },
     {
         id: 74,
         createdAt: '2026-08-08',
         imageName: 'products/product_74',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 Layered Henley Neck Tee M.Grey',
+        brand: '니트리',
+        name: '오트밀 라운드넥 니트',
         price: 113000,
         discountRate: 0,
         type: '상의',
         category: '상의',
-        group: '티셔츠',
+        group: '니트',
         item: '긴소매',
-        season: '사계절',
+        season: '봄·가을',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 78, M: 66, L: 0, XL: 56 },
         gender: 'women',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 Layered Henley Neck Tee M.Grey.'
+        description: '은은한 오트밀 컬러의 얇은 라운드넥 니트. 가볍게 걸치기 좋아 간절기에 손이 자주 간다.'
     },
     {
         id: 75,
         createdAt: '2026-08-09',
         imageName: 'products/product_75',
-        brand: '지프',
-        name: '[360g] M-Logo 반집업 맨투맨 (JR5TSU838MR)',
+        brand: '코지룸',
+        name: '파스텔 핑크 후드 티셔츠',
         price: 44990,
         discountRate: 0,
         type: '상의',
         category: '상의',
         group: '티셔츠',
         item: '긴소매',
-        season: '사계절',
+        season: '가을·겨울',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 84, M: 74, L: 82, XL: 8 },
         gender: 'women',
-        description: '지프(JEEP) [360g] M-Logo 반집업 맨투맨 (JR5TSU838MR).'
+        description: '부드러운 기모 안감의 파스텔 핑크 후드. 넉넉한 기장이라 원피스처럼 입어도 귀엽다.'
     },
     {
         id: 76,
         createdAt: '2026-08-10',
         imageName: 'products/product_76',
-        brand: '디키즈',
-        name: '디키즈 x 해칭룸 VTG Horseshoe Tee Avocado',
+        brand: '모노결',
+        name: '카키 그린 슬림 반팔 티셔츠',
         price: 79000,
         discountRate: 0,
         type: '상의',
@@ -1196,32 +1195,32 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 71, M: 75, L: 47, XL: 55 },
         gender: 'women',
-        description: '디키즈(DICKIES) 디키즈 x 해칭룸 VTG Horseshoe Tee Avocado.'
+        description: '차분한 카키 그린의 슬림핏 반팔 티셔츠. 얇고 시원한 원단이라 여름 이너로 좋다.'
     },
     {
         id: 77,
         createdAt: '2026-08-11',
         imageName: 'products/product_77',
-        brand: '미쏘',
-        name: '와플 스냅 긴팔 티셔츠_MIWLWG934A',
+        brand: '오후세시',
+        name: '스퀘어넥 크롭 긴팔 티셔츠',
         price: 34930,
         discountRate: 0,
         type: '상의',
         category: '상의',
         group: '티셔츠',
-        item: '긴소매',
+        item: '크롭',
         season: '사계절',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 28, M: 14, L: 97, XL: 56 },
         gender: 'women',
-        description: '미쏘(MIXXO) 와플 스냅 긴팔 티셔츠_MIWLWG934A.'
+        description: '스퀘어 넥라인의 크림색 크롭 긴팔. 몸에 붙는 골지 원단이라 데님과 함께 깔끔하게 입는다.'
     },
     {
         id: 78,
         createdAt: '2026-08-12',
         imageName: 'products/product_78',
-        brand: '아수라',
-        name: 'PURE WOOL DEEP V KNIT (DARK PURPLE)',
+        brand: '니트리',
+        name: '브라운 루즈핏 니트',
         price: 83300,
         discountRate: 0,
         type: '상의',
@@ -1232,14 +1231,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 68, M: 94, L: 58, XL: 83 },
         gender: 'women',
-        description: '아수라(ASURA) PURE WOOL DEEP V KNIT (DARK PURPLE).'
+        description: '따뜻한 브라운 컬러의 루즈핏 니트. 촘촘한 짜임이라 한겨울 아우터 안에 입기 좋다.'
     },
     {
         id: 79,
         createdAt: '2026-08-13',
         imageName: 'products/product_79',
-        brand: '2000아카이브스',
-        name: 'DEEP SCOOP BACK T (4 COLORS)',
+        brand: '모노결',
+        name: '드롭숄더 화이트 반팔 티셔츠',
         price: 68000,
         discountRate: 0,
         type: '상의',
@@ -1250,14 +1249,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 73, M: 60, L: 1, XL: 51 },
         gender: 'women',
-        description: '2000아카이브스(2000ARCHIVES) DEEP SCOOP BACK T (4 COLORS).'
+        description: '어깨가 떨어지는 드롭숄더 핏의 화이트 티셔츠. 쇼츠와 함께 입으면 여름 데일리룩이 된다.'
     },
     {
         id: 80,
         createdAt: '2026-08-14',
         imageName: 'products/product_80',
-        brand: '베리시',
-        name: '이즈핏 커버업 후디',
+        brand: '코지룸',
+        name: '라이트그레이 베이직 후드',
         price: 64800,
         discountRate: 0,
         type: '상의',
@@ -1268,14 +1267,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 45, M: 36, L: 66, XL: 82 },
         gender: 'women',
-        description: '베리시(VERISH) 이즈핏 커버업 후디.'
+        description: '군더더기 없는 라이트그레이 후드. 바이커 쇼츠나 조거 팬츠와 매치하기 좋은 기본 아이템.'
     },
     {
         id: 81,
         createdAt: '2026-08-15',
         imageName: 'products/product_81',
-        brand: '프리버07',
-        name: 'Button collar pk knit [FRFA05NT01]_Wine',
+        brand: '니트리',
+        name: '버건디 케이블 니트',
         price: 70560,
         discountRate: 0,
         type: '상의',
@@ -1286,14 +1285,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 52, M: 50, L: 74, XL: 83 },
         gender: 'women',
-        description: '프리버07(FRIVER07) Button collar pk knit [FRFA05NT01]_Wine.'
+        description: '꽈배기 짜임이 도드라지는 버건디 니트. 도톰해서 겨울 내내 따뜻하게 입을 수 있다.'
     },
     {
         id: 82,
         createdAt: '2026-08-16',
         imageName: 'products/product_82',
-        brand: '앤더슨벨',
-        name: '(ESSENTIAL) DISTRESSED VARSITY PATCH SWEATER (CREAM)',
+        brand: '포그웨어',
+        name: '아이보리 롱 터틀넥 니트',
         price: 247000,
         discountRate: 0,
         type: '상의',
@@ -1304,14 +1303,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 44, M: 16, L: 61, XL: 17 },
         gender: 'women',
-        description: '앤더슨벨(ADSB ANDERSSON BELL) (ESSENTIAL) DISTRESSED VARSITY PATCH SWEATER (CREAM).'
+        description: '엉덩이를 덮는 긴 기장의 아이보리 터틀넥. 레깅스나 슬림 팬츠와 함께 원피스처럼 입는다.'
     },
     {
         id: 83,
         createdAt: '2026-08-17',
         imageName: 'products/product_83',
-        brand: '유라고',
-        name: 'Washable V-neck knit shawl set_Melange gray',
+        brand: '포그웨어',
+        name: '라이트그레이 골지 니트',
         price: 61200,
         discountRate: 0,
         type: '상의',
@@ -1322,32 +1321,32 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 35, M: 55, L: 56, XL: 95 },
         gender: 'women',
-        description: '유라고(URAGO) Washable V-neck knit shawl set_Melange gray.'
+        description: '굵은 골지 짜임의 라이트그레이 니트. 넉넉한 품이라 셔츠 위에 겹쳐 입기 좋다.'
     },
     {
         id: 84,
         createdAt: '2026-08-18',
         imageName: 'products/product_84',
-        brand: '슈퍼서브',
-        name: '[크롭]호리젠탈 레터링 헨리넥 후드 긴팔 티셔츠-멜란지그레이',
+        brand: '코지룸',
+        name: '그레이 오버핏 후드티',
         price: 42900,
         discountRate: 0,
         type: '상의',
         category: '상의',
-        group: '티셔츠',
-        item: '크롭',
-        season: '사계절',
+        group: '맨투맨·후드',
+        item: '후드티',
+        season: '가을·겨울',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 98, M: 85, L: 72, XL: 96 },
         gender: 'unisex',
-        description: '슈퍼서브(SUPERSUB) [크롭]호리젠탈 레터링 헨리넥 후드 긴팔 티셔츠-멜란지그레이.'
+        description: '넉넉한 품의 그레이 후드티. 기모 안감이라 쌀쌀한 날 아우터 없이도 따뜻하다.'
     },
     {
         id: 85,
         createdAt: '2026-08-19',
         imageName: 'products/product_85',
-        brand: '브라운브레스',
-        name: 'PAISLEY TAG LONGSLEEVE (3colors)',
+        brand: '니트리',
+        name: '베이직 긴팔 니트 티셔츠 3컬러',
         price: 52250,
         discountRate: 0,
         type: '상의',
@@ -1358,32 +1357,32 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 15, M: 55, L: 14, XL: 65 },
         gender: 'unisex',
-        description: '브라운브레스(BROWNBREATH) PAISLEY TAG LONGSLEEVE (3colors).'
+        description: '베이지·아이보리·브라운 세 가지 색의 얇은 긴팔 니트. 하나만 입어도 레이어드해도 좋다.'
     },
     {
         id: 86,
         createdAt: '2026-08-20',
         imageName: 'products/product_86',
-        brand: '마이초이도쿄',
-        name: 'MAICHOI Vintage Patch Hoodie [3color]',
+        brand: '코지룸',
+        name: '베이직 후드티 10컬러',
         price: 69000,
         discountRate: 0,
         type: '상의',
         category: '상의',
-        group: '티셔츠',
-        item: '긴소매',
+        group: '맨투맨·후드',
+        item: '후드티',
         season: '사계절',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 10, M: 39, L: 14, XL: 51 },
         gender: 'unisex',
-        description: '마이초이도쿄(MAICHOI TOKYO) MAICHOI Vintage Patch Hoodie [3color].'
+        description: '열 가지 색으로 준비한 기본 후드티. 남녀 모두 입기 좋은 넉넉한 핏.'
     },
     {
         id: 87,
         createdAt: '2026-08-21',
         imageName: 'products/product_87',
-        brand: '컴포트랩',
-        name: '쿨러닝 쇼츠',
+        brand: '블루라인 데님',
+        name: '라이트 워싱 데님 쇼츠',
         price: 28400,
         discountRate: 0,
         type: '하의',
@@ -1394,14 +1393,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 38, M: 76, L: 4, XL: 83 },
         gender: 'women',
-        description: '컴포트랩(COMFORTLAB) 쿨러닝 쇼츠.'
+        description: '밑단을 한 번 접은 라이트 워싱 데님 쇼츠. 반팔 티셔츠와 함께 여름 내내 편하게 입는다.'
     },
     {
         id: 88,
         createdAt: '2026-08-22',
         imageName: 'products/product_88',
-        brand: '아디다스',
-        name: '파이어버드 배럴 팬츠 - 블랙 / LF1057',
+        brand: '슬로우핏',
+        name: '헤링본 패턴 와이드 팬츠',
         price: 89380,
         discountRate: 0,
         type: '하의',
@@ -1412,14 +1411,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 27, M: 72, L: 90, XL: 74 },
         gender: 'women',
-        description: '아디다스(ADIDAS) 파이어버드 배럴 팬츠 - 블랙 / LF1057.'
+        description: '잔잔한 헤링본 패턴의 차콜 와이드 팬츠. 허리 밴딩이라 편하고 통이 넓어 다리 라인을 가려 준다.'
     },
     {
         id: 89,
         createdAt: '2026-08-23',
         imageName: 'products/product_89',
-        brand: '무신사 스탠다드 우먼',
-        name: '우먼즈 코튼 커브드 팬츠 (5 colors)',
+        brand: '슬로우핏',
+        name: '카멜 슬림 슬랙스',
         price: 44910,
         discountRate: 0,
         type: '하의',
@@ -1430,32 +1429,32 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 94, M: 95, L: 61, XL: 80 },
         gender: 'women',
-        description: '무신사 스탠다드 우먼(MUSINSA STANDARD WOMAN) 우먼즈 코튼 커브드 팬츠 (5 colors).'
+        description: '따뜻한 카멜 컬러의 슬림 슬랙스. 발목까지 떨어지는 기장이라 스니커즈와 잘 어울린다.'
     },
     {
         id: 90,
         createdAt: '2026-08-24',
         imageName: 'products/product_90',
-        brand: '배드블러드',
-        name: '델타2 유틸리티 루즈핏 커브드 조거- 블랙',
+        brand: '트랙하우스',
+        name: '퍼플 트레이닝 조거',
         price: 176400,
         discountRate: 0,
         type: '하의',
         category: '하의',
         group: '긴바지',
-        item: '와이드 팬츠',
+        item: '트레이닝 팬츠',
         season: '사계절',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 11, M: 13, L: 35, XL: 10 },
         gender: 'unisex',
-        description: '배드블러드(BADBLOOD) 델타2 유틸리티 루즈핏 커브드 조거- 블랙.'
+        description: '광택이 은은한 퍼플 트레이닝 조거. 밑단 밴딩이라 운동화와 함께 깔끔하게 떨어진다.'
     },
     {
         id: 91,
         createdAt: '2026-08-25',
         imageName: 'products/product_91',
-        brand: '미쏘',
-        name: '핏업데님 릴렉스 부츠컷_MIWTJG936J MIWTJG946J',
+        brand: '블루라인 데님',
+        name: '그레이 워싱 부츠컷 데님',
         price: 42420,
         discountRate: 0,
         type: '하의',
@@ -1466,14 +1465,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 81, M: 41, L: 76, XL: 75 },
         gender: 'women',
-        description: '미쏘(MIXXO) 핏업데님 릴렉스 부츠컷_MIWTJG936J MIWTJG946J.'
+        description: '무릎 아래로 살짝 퍼지는 부츠컷 핏의 그레이 데님. 하이웨이스트라 다리가 길어 보인다.'
     },
     {
         id: 92,
         createdAt: '2026-08-26',
         imageName: 'products/product_92',
-        brand: '511비전',
-        name: 'DUSTY LOW-RISE BOOTCUT DENIM PANTS',
+        brand: '블루라인 데님',
+        name: '미디엄 블루 스트레이트 데님',
         price: 135780,
         discountRate: 0,
         type: '하의',
@@ -1484,14 +1483,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 29, M: 18, L: 11, XL: 42 },
         gender: 'women',
-        description: '511비전(511VISION) DUSTY LOW-RISE BOOTCUT DENIM PANTS.'
+        description: '곧게 떨어지는 스트레이트 핏의 미디엄 블루 데님. 어떤 상의와도 무난하게 어울리는 기본 청바지.'
     },
     {
         id: 93,
         createdAt: '2026-08-27',
         imageName: 'products/product_93',
-        brand: '미쏘',
-        name: '카고 와이드핏 팬츠_MIWTCG911B',
+        brand: '트랙하우스',
+        name: '라벤더 카고 조거 팬츠',
         price: 41930,
         discountRate: 0,
         type: '하의',
@@ -1502,50 +1501,50 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 42, M: 7, L: 54, XL: 39 },
         gender: 'women',
-        description: '미쏘(MIXXO) 카고 와이드핏 팬츠_MIWTCG911B.'
+        description: '사이드 포켓이 달린 라벤더 카고 조거. 밑단 밴딩이라 운동화와 함께 활동적으로 입기 좋다.'
     },
     {
         id: 94,
         createdAt: '2026-08-28',
         imageName: 'products/product_94',
-        brand: '모이페어',
-        name: 'FLOWER WIDE PANTS / BEIGE',
+        brand: '오후세시',
+        name: '플라워 프린트 와이드 팬츠',
         price: 111300,
         discountRate: 0,
         type: '하의',
         category: '하의',
         group: '긴바지',
         item: '와이드 팬츠',
-        season: '사계절',
+        season: '봄·여름',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 54, M: 37, L: 37, XL: 17 },
         gender: 'women',
-        description: '모이페어(MOIFAIRE) FLOWER WIDE PANTS / BEIGE.'
+        description: '레트로한 꽃무늬가 들어간 와이드 팬츠. 민소매 탑과 함께 입으면 휴양지 코디로 좋다.'
     },
     {
         id: 95,
         createdAt: '2026-08-29',
         imageName: 'products/product_95',
-        brand: '본투윈',
-        name: 'W B PENDANT TROUSER [BLACK]',
+        brand: '슬로우핏',
+        name: '옐로 테이퍼드 슬랙스',
         price: 109000,
         discountRate: 0,
         type: '하의',
         category: '하의',
         group: '긴바지',
         item: '슬랙스',
-        season: '사계절',
+        season: '봄·여름',
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 47, M: 53, L: 77, XL: 67 },
         gender: 'women',
-        description: '본투윈(BORN TO WIN) W B PENDANT TROUSER [BLACK].'
+        description: '발목으로 갈수록 좁아지는 테이퍼드 핏의 옐로 슬랙스. 화이트 티셔츠와 매치하면 산뜻하다.'
     },
     {
         id: 96,
         createdAt: '2026-08-30',
         imageName: 'products/product_96',
-        brand: '오픈야드(오와이)',
-        name: 'NAPOLEON TRIM WIDE HEM PANTS - BLACK',
+        brand: '코지룸',
+        name: '베이지 스웨트 와이드 팬츠',
         price: 116100,
         discountRate: 0,
         type: '하의',
@@ -1556,14 +1555,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 28, M: 96, L: 26, XL: 42 },
         gender: 'unisex',
-        description: '오픈야드(오와이)(OPENYARD(OY)) NAPOLEON TRIM WIDE HEM PANTS - BLACK.'
+        description: '통이 넓은 베이지 스웨트 팬츠. 같은 색 맨투맨과 셋업으로 입으면 편하면서도 멋스럽다.'
     },
     {
         id: 97,
         createdAt: '2026-08-31',
         imageName: 'products/product_97',
-        brand: '무신사 스탠다드 우먼',
-        name: '우먼즈 에센셜 스트레이트 데님 팬츠 [블랙]',
+        brand: '블루라인 데님',
+        name: '딥블루 이지 데님 팬츠',
         price: 49900,
         discountRate: 0,
         type: '하의',
@@ -1574,14 +1573,14 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 27, M: 86, L: 49, XL: 88 },
         gender: 'women',
-        description: '무신사 스탠다드 우먼(MUSINSA STANDARD WOMAN) 우먼즈 에센셜 스트레이트 데님 팬츠 [블랙].'
+        description: '허리끈으로 조절하는 밴딩 데님. 부드러운 원단이라 하루 종일 편하게 입을 수 있다.'
     },
     {
         id: 98,
         createdAt: '2026-09-01',
         imageName: 'products/product_98',
-        brand: '로타입',
-        name: 'Checkered Double Layered Sweatpants - Gray',
+        brand: '코지룸',
+        name: '그레이 스웨트 조거 팬츠',
         price: 86250,
         discountRate: 0,
         type: '하의',
@@ -1592,7 +1591,7 @@ const importedProducts = [
         sizes: ['S', 'M', 'L', 'XL'],
         stock: { S: 1, M: 68, L: 50, XL: 48 },
         gender: 'women',
-        description: '로타입(ROUGHTYPE) Checkered Double Layered Sweatpants - Gray.'
+        description: '부드러운 기모 원단의 그레이 조거 팬츠. 밑단 밴딩이라 운동화와 함께 편하게 입는다.'
     }
 ];
 

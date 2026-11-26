@@ -5,6 +5,28 @@ import { readStorage, writeStorage, clearStorage } from '../utils/storage';
 
 const STORAGE_KEY = 'ootd_products';
 
+// 기초 의류 데이터(mocks/products.js)의 이름·사진 설명을 크게 바꾸면 이 번호를 올린다.
+// 저장된 데이터의 번호가 다르면 기초 의류의 설명 항목만 새 값으로 바꾸고, 재고와 관리자가 추가한 의류는 그대로 둔다
+// 2: 사진을 Unsplash 무료 사진으로 바꾸면서 이름·브랜드·설명을 새로 썼다
+const PRODUCT_DATA_VERSION = 2;
+const DESCRIPTIVE_FIELDS = ['brand', 'name', 'description', 'type', 'category', 'group', 'item', 'season', 'gender', 'imageName'];
+
+// 저장된 의류 목록에 새 기초 데이터의 설명 항목을 덮어쓴다 (id 가 같은 기초 의류만)
+function refreshDescriptions(storedProducts) {
+    const base = new Map(mockProducts.map(product => [product.id, product]));
+    return storedProducts.map(product => {
+        const fresh = base.get(product.id);
+        if (!fresh) {
+            return product;
+        }
+        const next = { ...product };
+        DESCRIPTIVE_FIELDS.forEach(field => {
+            next[field] = fresh[field];
+        });
+        return next;
+    });
+}
+
 // 재고 상태 기준 (F-27): 4개 이상 정상, 1~3개 재고 부족, 0개 재고 없음
 export const LOW_STOCK_LIMIT = 3;
 
@@ -58,14 +80,21 @@ function formatDateTime(date) {
 function ProductsProvider({ children }) {
 
     const [stored] = useState(() => readStorage(STORAGE_KEY, isProductData));
-    const [products, setProducts] = useState(stored.value ? stored.value.products : mockProducts);
+    const [products, setProducts] = useState(() => {
+        if (!stored.value) {
+            return mockProducts;
+        }
+        return stored.value.dataVersion === PRODUCT_DATA_VERSION
+            ? stored.value.products
+            : refreshDescriptions(stored.value.products);
+    });
     // 다음에 등록할 의류 번호 (한 번 쓴 번호는 다시 쓰지 않는다)
     const [nextId, setNextId] = useState(stored.value ? stored.value.nextId : Math.max(...mockProducts.map(product => product.id)) + 1);
     const [storageBroken, setStorageBroken] = useState(stored.broken);
 
     // 먼저 저장해 보고, 성공했을 때만 화면의 의류 데이터를 바꾼다
     function saveProducts(next, nextNextId = nextId) {
-        if (storageBroken || !writeStorage(STORAGE_KEY, { products: toStored(next), nextId: nextNextId })) {
+        if (storageBroken || !writeStorage(STORAGE_KEY, { products: toStored(next), nextId: nextNextId, dataVersion: PRODUCT_DATA_VERSION })) {
             return false;
         }
 
@@ -135,7 +164,7 @@ function ProductsProvider({ children }) {
         const next = computeStock(items.map(item => ({ productId: item.productId, size: item.size, amount: -item.quantity })));
 
         return {
-            entry: { key: STORAGE_KEY, value: { products: toStored(next), nextId } },
+            entry: { key: STORAGE_KEY, value: { products: toStored(next), nextId, dataVersion: PRODUCT_DATA_VERSION } },
             apply: () => setProducts(next)
         };
     }

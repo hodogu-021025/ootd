@@ -12,7 +12,7 @@ function ProductCard({ product }) {
         <div className={styles.wrap}>
             <Link to={`/products/${product.id}`} className={styles.card}>
                 <div className={styles.imageBox}>
-                    <img src={product.image} alt={product.name} className={styles.image} />
+                    <img src={product.image} alt={product.name} className={styles.image} loading="lazy" decoding="async" />
                 </div>
 
                 <p className={styles.brand}>{product.brand}</p>

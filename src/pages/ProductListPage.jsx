@@ -63,7 +63,7 @@ function ProductListPage() {
         item: searchParams.get('item')
     };
 
-    // 선택한 브랜드: /products?gender=men&brand=디키즈 (없으면 전체 브랜드)
+    // 선택한 브랜드: /products?gender=men&brand=슬로우핏 (없으면 전체 브랜드)
     const brand = searchParams.get('brand') || '';
 
     // 선택한 계절: /products?gender=men&season=여름 (없거나 잘못된 값이면 전체 계절)

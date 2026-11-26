@@ -31,7 +31,7 @@ function RestockAlertsPage() {
                             return (
                                 <li key={`${alert.productId}-${alert.size}-${alert.requestedAt}`} className={styles.item}>
                                     {product
-                                        ? <img src={product.image} alt="" className={styles.image} />
+                                        ? <img src={product.image} alt="" className={styles.image} loading="lazy" decoding="async" />
                                         : <div className={styles.image}></div>
                                     }
 

@@ -23,7 +23,7 @@ function CartItem({ item, stock, onDecrease, onIncrease, onRemove }) {
         return (
             <li className={styles.item}>
                 {product
-                    ? <img src={product.image} alt="" className={styles.itemImage} />
+                    ? <img src={product.image} alt="" className={styles.itemImage} loading="lazy" decoding="async" />
                     : <div className={styles.itemImage}></div>
                 }
 
@@ -44,7 +44,7 @@ function CartItem({ item, stock, onDecrease, onIncrease, onRemove }) {
     return (
         <li className={styles.item}>
             <Link to={`/products/${product.id}`}>
-                <img src={product.image} alt="" className={styles.itemImage} />
+                <img src={product.image} alt="" className={styles.itemImage} loading="lazy" decoding="async" />
             </Link>
 
             <div className={styles.itemInfo}>

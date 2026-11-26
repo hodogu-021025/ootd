@@ -32,13 +32,11 @@ const OOTD_LOOKS = [
         image: model01,
         profile: model01Profile,
         name: 'yena_',
-        tags: '#벚꽃 #핑쿠핑쿠 #봄옷',
-        text: '벚꽃과 어울리는 핑크 코디',
+        tags: '#봄 #출근룩 #베이지',
+        text: '칼라 블라우스에 베이지 슬랙스로 단정하게',
         outfit: [
-            { category: '아우터', name: '슬림 롱 슬리브 코튼 가디건', productId: 2 },
-            { category: '상의', name: '빈티지 리본 레이스 탑', productId: 1 },
-            { category: '하의', name: '엔트리 맘핏 데님 아이보리', productId: 102 },
-            { category: '악세사리', name: '실버 레더 숄더백', productId: 99 }
+            { category: '상의', name: '시어 칼라 블라우스', productId: 1 },
+            { category: '하의', name: '투턱 베이지 와이드 슬랙스', productId: 102 }
         ]
     },
     {
@@ -46,24 +44,21 @@ const OOTD_LOOKS = [
         profile: model02Profile,
         name: 'min_hyuk',
         tags: '#가을 #가을남자',
-        text: '가을 타는 느좋남 코디',
+        text: '가을 타는 느좋남 셔츠 코디',
         outfit: [
-            { category: '상의', name: '오버사이즈 린넨 혼방 긴팔 셔츠', productId: 23 },
-            { category: '하의', name: '세미와이드 투턱 슬랙스', productId: 100 },
-            { category: '악세사리', name: '클래식 블랙 레더 벨트', productId: 24 },
-            { category: '악세사리', name: '라운드 메탈 프레임 안경', productId: 42 }
+            { category: '상의', name: '딥퍼플 코튼 셔츠', productId: 23 },
+            { category: '하의', name: '연청 스키니 데님', productId: 100 }
         ]
     },
     {
         image: model03,
         profile: model03Profile,
         name: 'k_min',
-        tags: '#여름 #여름엔아아',
-        text: '아아와 함께하는 여름 코디',
+        tags: '#여름 #거울샷',
+        text: '캐미솔과 와이드 데님으로 시원한 여름 코디',
         outfit: [
-            { category: '상의', name: '빈티지 리본 레이스 탑', productId: 1 },
-            { category: '하의', name: '사이드 핀턱 와이드 데님 팬츠', productId: 101 },
-            { category: '악세사리', name: '블랙 오벌 프레임 선글라스', productId: 41 }
+            { category: '상의', name: '슬림 블랙 캐미솔', productId: 3 },
+            { category: '하의', name: '하이웨이스트 와이드 데님', productId: 101 }
         ]
     }
 ];
@@ -96,13 +91,13 @@ function OotdCard({ image, profile, name, tags, text, outfit }) {
     return (
         <article className={styles.card}>
             <div className={styles.cardHeader}>
-                <img src={profile} alt="" className={styles.cardAvatar} />
+                <img src={profile} alt="" className={styles.cardAvatar} loading="lazy" decoding="async" />
                 <span className={styles.cardName}>{name}</span>
             </div>
 
             {/* 사진 위에 옷 정보 목록을 겹친다 (사진 자체는 누르지 않는다) */}
             <div className={styles.cardMedia}>
-                <img src={image} alt="" className={styles.cardImage} />
+                <img src={image} alt="" className={styles.cardImage} loading="lazy" decoding="async" />
 
                 {/* 커서를 올리면 사진 위에 착용한 옷 정보가 나타난다 */}
                 <div className={styles.outfitOverlay}>
@@ -193,7 +188,7 @@ function HomePage() {
             {/* 히어로 표지: 제자리에 고정된 채 흐려지고, 아래 내용이 그 위를 덮으며 올라온다 */}
             <div className={styles.heroWrap}>
                 <section className={styles.hero} style={heroStyle}>
-                    <img src={homeTitle} alt="" className={styles.heroImage} style={heroImageStyle} />
+                    <img src={homeTitle} alt="" className={styles.heroImage} style={heroImageStyle} fetchPriority="high" />
 
                     <div className={styles.heroText}>
                         <img src={ootdLogo} alt="" className={styles.heroLogo} />
@@ -214,17 +209,17 @@ function HomePage() {
 
                 <div className={styles.banners}>
                     <Link to="/products?gender=men" className={styles.banner}>
-                        <img src={menTitle} alt="" className={styles.bannerImage} />
+                        <img src={menTitle} alt="" className={styles.bannerImage} loading="lazy" decoding="async" />
                         <span className={styles.bannerLabel}>MEN</span>
                     </Link>
 
                     <Link to="/products?gender=women" className={styles.banner}>
-                        <img src={womenTitle} alt="" className={styles.bannerImage} />
+                        <img src={womenTitle} alt="" className={styles.bannerImage} loading="lazy" decoding="async" />
                         <span className={styles.bannerLabel}>WOMEN</span>
                     </Link>
 
                     <Link to="/products?gender=unisex" className={styles.banner}>
-                        <img src={unisexTitle} alt="" className={styles.bannerImage} />
+                        <img src={unisexTitle} alt="" className={styles.bannerImage} loading="lazy" decoding="async" />
                         <span className={styles.bannerLabel}>UNISEX</span>
                     </Link>
                 </div>
